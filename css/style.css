@@ -1,0 +1,20 @@
+img {
+  width: 20%;
+}
+
+body {
+  font-family: roboto;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+/* titre nom du restaurant menu.html*/
+.restaurant__name {
+  font-family: "Shrikhand", cursive;
+}
+
+img .photo-menu {
+  width: 70%;
+}

@@ -13,9 +13,8 @@
         <link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon/android-chrome-192x192.png">
         <link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon/android-chrome-512x512.png">
 
-        <link rel="stylesheet" type="text/css" href="css/styles.css"> 
-        <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@100&display=swap" rel="stylesheet"> 
-        
+        <link rel="stylesheet" type="text/css" href="./css/style.css"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/b10d48f723.js" crossorigin="anonymous"></script>             
     </head>
 
@@ -26,18 +25,20 @@
         </header>
         
         <main>
-            <div class="location">
-                <i class="fas fa-map-marker-alt"></i>
-                <input type="search" class="location__text" value="Paris, Belleville"> 
+            <div class="location">                
+                    <span><i class="fas fa-map-marker-alt"></i></span>
+                    <p class="location__text">Paris, Belleville</p>                                 
            </div>
 
             <section class="presentation">
-                <h1> Réservez le menu qui vous convient !! </h1>
+                <h1> Réservez le menu qui vous convient</h1>
+               
                 <p class="presentation__text"> Découvrez des restaurants d'exception, sélectionnés par nos soins. </p>
-                <div class="prestation__btn">
-                    <!--<input type="button" class="presentation__btn" value="Explorer nos restaurants" >-->
+                
+                <div class="presentation__btn">           
                     <a href="#restaurant">Explorer nos restaurants</a>
-                </div>
+                </div>                       
+                    <!--<a class="presentation__btn" href="#restaurant">Explorer nos restaurants</a>-->              
             </section>
 
             <section class="operation">
@@ -62,7 +63,7 @@
                 </div>
             </section>
 
-            <section class="restaurant">
+            <section id="restaurant" class="restaurant">
                 <h2> Restaurants</h2>
 
                 <div class="card">
@@ -113,6 +114,8 @@
 
     <footer>
         <img id="logo__footer" src="images/logo/ohmyfood.png" alt="logo_ohmyfood">
+        <!--ohmyfood@2x.svg  pour changer la couleur des lettres--> 
+        
         <ul class="mention">
             <li> <a href=""> <i class="fas footer fa-utensils"></i> Proposer une restaurant </a> </li>
             <li> <a href=""> <i class="fas footer fa-hands-helping"></i>Devenir partenaire </a> </li>
