@@ -1,75 +1,44 @@
 @charset "UTF-8";
-/*************** Caractéristiques GENERALES ***************/
-/*************** Caractéristiques INDEX ***************/
-/*************** Caractéristiques MENU ***************/
-/*************** Caractéristiques GENERALES ***************/
-/*************** Caractéristiques INDEX ***************/
-/*************** Caractéristiques MENU ***************/
-/*************** Caractéristiques GENERALES ***************/
-/*************** Caractéristiques INDEX ***************/
-/*************** Caractéristiques MENU ***************/
-/*************** Caractéristiques GENERALES ***************/
-/*************** Caractéristiques INDEX ***************/
-/*************** Caractéristiques MENU ***************/
-/*************** Caractéristiques GENERALES *************/
-img {
+/*************** BASE Caractéristiques GENERALES *************/
+.photo {
   width: 20%;
 }
 
-/*************** Caractéristiques INDEX ***************/
-/*************** Caractéristiques MENU ***************/
+/*************** BASE Caractéristiques INDEX ***************/
+/*************** BASE Caractéristiques MENU ***************/
 img .photo-menu {
   width: 70%;
 }
 
-/*************** Caractéristiques GENERALES *************/
+/*************** TYPO Caractéristiques GENERALES *************/
 body {
   font-family: roboto;
-  font-size: 1.5em;
-  color: red;
-  background-color: yellow;
 }
 
-.presentation h1 {
+h1 {
   font-size: 1.5em;
-  color: red;
-  background-color: yellow;
+  background-color: #c0c0d6;
+  border-radius: 10px 10px 5px 5px;
 }
 
-/*************** Caractéristiques INDEX ***************/
-/*************** Caractéristiques MENU ***************/
+/*************** TYPO Caractéristiques INDEX ***************/
+/*************** TYPO Caractéristiques MENU ***************/
 .restaurant__name {
   font-family: "Shrikhand", cursive;
 }
 
-/*************** Caractéristiques GENERALES ***************/
-/*************** Caractéristiques INDEX ***************/
-/*************** Caractéristiques MENU ***************/
-/*************** Caractéristiques GENERALES ***************/
-#logo__header .logo {
+/*************** BUTTONS Caractéristiques GENERALES ***************/
+/*************** BUTTONS Caractéristiques INDEX ***************/
+/*************** BUTTONS Caractéristiques MENU ***************/
+/*************** HEADER Caractéristiques GENERALES ***************/
+/*************** HEADER Caractéristiques INDEX ***************/
+#logo__header {
   display: flex;
   justify-content: center;
+}
+#logo__header.logo {
   width: 500%;
-  background-color: yellow;
+  background-color: blue;
 }
 
-/*************** Caractéristiques INDEX ***************/
-/*************** Caractéristiques MENU ***************/
-/*************** Caractéristiques GENERALES ***************/
-/*************** Caractéristiques INDEX ***************/
-/*************** Caractéristiques MENU ***************/
-/*************** Caractéristiques GENERALES ***************/
-/*************** Caractéristiques INDEX ***************/
-/*************** Caractéristiques MENU ***************/
-/*************** Caractéristiques GENERALES ***************/
-/*************** Caractéristiques INDEX ***************/
-/*************** Caractéristiques MENU ***************/
-/*************** Caractéristiques GENERALES ***************/
-/*************** Caractéristiques INDEX ***************/
-/*************** Caractéristiques MENU ***************/
-/*************** Caractéristiques GENERALES ***************/
-/*************** Caractéristiques INDEX ***************/
-/*************** Caractéristiques MENU ***************/
-/*************** Caractéristiques GENERALES ***************/
-/*************** Caractéristiques INDEX ***************/
-/*************** Caractéristiques MENU ***************/
+/*************** HEADER Caractéristiques MENU ***************/

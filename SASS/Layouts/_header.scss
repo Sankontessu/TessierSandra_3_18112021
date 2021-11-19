@@ -1,14 +1,17 @@
-/*************** Caractéristiques GENERALES ***************/
-#logo__header .logo{
+/*************** HEADER Caractéristiques GENERALES ***************/
+
+
+/*************** HEADER Caractéristiques INDEX ***************/
+#logo__header{
     display: flex;
     justify-content: center;
+
+    &.logo{
     width: 500%;
-    background-color: blue;
+    background-color: blue; 
+    }
 }
 
-/*************** Caractéristiques INDEX ***************/
-
-
-/*************** Caractéristiques MENU ***************/
+/*************** HEADER Caractéristiques MENU ***************/
 
 
