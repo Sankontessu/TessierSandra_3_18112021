@@ -1,4 +1,8 @@
 
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions";
 @import "./base/base";
 @import "./base/typography";
 @import "./components/buttons";
@@ -7,8 +11,4 @@
 @import "./layouts/form";
 @import "./layouts/footer";
 @import "./pages/project";
-@import "./utils/variables";
-@import "./utils/functions";
-@import "./utils/mixins";
-@import "./utils/extensions";
 
