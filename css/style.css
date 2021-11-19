@@ -1,20 +1,75 @@
+@charset "UTF-8";
+/*************** Caractéristiques GENERALES ***************/
+/*************** Caractéristiques INDEX ***************/
+/*************** Caractéristiques MENU ***************/
+/*************** Caractéristiques GENERALES ***************/
+/*************** Caractéristiques INDEX ***************/
+/*************** Caractéristiques MENU ***************/
+/*************** Caractéristiques GENERALES ***************/
+/*************** Caractéristiques INDEX ***************/
+/*************** Caractéristiques MENU ***************/
+/*************** Caractéristiques GENERALES ***************/
+/*************** Caractéristiques INDEX ***************/
+/*************** Caractéristiques MENU ***************/
+/*************** Caractéristiques GENERALES *************/
 img {
   width: 20%;
 }
 
+/*************** Caractéristiques INDEX ***************/
+/*************** Caractéristiques MENU ***************/
+img .photo-menu {
+  width: 70%;
+}
+
+/*************** Caractéristiques GENERALES *************/
 body {
   font-family: roboto;
-}
-
-h1 {
   font-size: 1.5em;
+  color: red;
+  background-color: yellow;
 }
 
-/* titre nom du restaurant menu.html*/
+.presentation h1 {
+  font-size: 1.5em;
+  color: red;
+  background-color: yellow;
+}
+
+/*************** Caractéristiques INDEX ***************/
+/*************** Caractéristiques MENU ***************/
 .restaurant__name {
   font-family: "Shrikhand", cursive;
 }
 
-img .photo-menu {
-  width: 70%;
+/*************** Caractéristiques GENERALES ***************/
+/*************** Caractéristiques INDEX ***************/
+/*************** Caractéristiques MENU ***************/
+/*************** Caractéristiques GENERALES ***************/
+#logo__header .logo {
+  display: flex;
+  justify-content: center;
+  width: 500%;
+  background-color: yellow;
 }
+
+/*************** Caractéristiques INDEX ***************/
+/*************** Caractéristiques MENU ***************/
+/*************** Caractéristiques GENERALES ***************/
+/*************** Caractéristiques INDEX ***************/
+/*************** Caractéristiques MENU ***************/
+/*************** Caractéristiques GENERALES ***************/
+/*************** Caractéristiques INDEX ***************/
+/*************** Caractéristiques MENU ***************/
+/*************** Caractéristiques GENERALES ***************/
+/*************** Caractéristiques INDEX ***************/
+/*************** Caractéristiques MENU ***************/
+/*************** Caractéristiques GENERALES ***************/
+/*************** Caractéristiques INDEX ***************/
+/*************** Caractéristiques MENU ***************/
+/*************** Caractéristiques GENERALES ***************/
+/*************** Caractéristiques INDEX ***************/
+/*************** Caractéristiques MENU ***************/
+/*************** Caractéristiques GENERALES ***************/
+/*************** Caractéristiques INDEX ***************/
+/*************** Caractéristiques MENU ***************/
