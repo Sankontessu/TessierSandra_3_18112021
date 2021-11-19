@@ -2,14 +2,11 @@
 
 
 /*************** HEADER Caractéristiques INDEX ***************/
-#logo__header{
+#header__logo{
     display: flex;
     justify-content: center;
-
-    &.logo{
-    width: 500%;
-    background-color: blue; 
-    }
+    align-items: center;
+    background-color: chocolate;
 }
 
 /*************** HEADER Caractéristiques MENU ***************/
