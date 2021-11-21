@@ -1,16 +1,51 @@
-/*************** TYPO Caractéristiques GENERALES *************/
+/* TYPO GENERALES */
 body{
     font-family: roboto;
+    color: #000;
 }
+
+p{
+    font-size: 1.2rem;
+}
+
+
+/* TYPO Caractéristiques INDEX */
 h1{
-    font-size: 5rem;
-    border-bottom: yellow 2px solid;
-   
+    font-size: 1.8rem;
+    font-weight: bold;
+}
 
+.section__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    }  
+
+.presentation__text{
+    font-size: 1.5rem;  
+}
+
+a{
+    text-decoration: none;
+}
+
+/*section OPERATION "fonctionnement"*/
+.operation{
+
+    i{
+        font-size: 1.5rem;
+        color: #7e7e7e;
     }
-/*************** TYPO Caractéristiques INDEX ***************/
 
-/*************** TYPO Caractéristiques MENU ***************/
+    &__step__container-title{
+        font-weight: bold;
+    }
+}
+
+
+
+
+
+/* TYPO MENU */
 .restaurant__name{
     font-family: 'Shrikhand', cursive;
 }

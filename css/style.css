@@ -6,18 +6,45 @@
 
 /*************** BASE Caractéristiques INDEX ***************/
 /*************** BASE Caractéristiques MENU ***************/
-/*************** TYPO Caractéristiques GENERALES *************/
+/* TYPO GENERALES */
 body {
   font-family: roboto;
+  color: #000;
 }
 
+p {
+  font-size: 1.2rem;
+}
+
+/* TYPO Caractéristiques INDEX */
 h1 {
-  font-size: 5rem;
-  border-bottom: yellow 2px solid;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
-/*************** TYPO Caractéristiques INDEX ***************/
-/*************** TYPO Caractéristiques MENU ***************/
+.section__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.presentation__text {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*section OPERATION "fonctionnement"*/
+.operation i {
+  font-size: 1.5rem;
+  color: #7e7e7e;
+}
+.operation__step__container-title {
+  font-weight: bold;
+}
+
+/* TYPO MENU */
 .restaurant__name {
   font-family: "Shrikhand", cursive;
 }
@@ -25,14 +52,71 @@ h1 {
 /*************** BUTTONS Caractéristiques GENERALES ***************/
 /*************** BUTTONS Caractéristiques INDEX ***************/
 /*************** BUTTONS Caractéristiques MENU ***************/
-/*************** HEADER Caractéristiques GENERALES ***************/
-/*************** HEADER Caractéristiques INDEX ***************/
+/*HEADER - INDEX*/
 #header__logo {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 20px 0 20px 0;
 }
 
-/*************** HEADER Caractéristiques MENU ***************/
+/* HEADER MENU */
+/* page INDEX */
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  box-shadow: inset 0px 5px 3px #d5d5d5;
+  /*bordure intérieure*/
+}
+.location .fa-map-marker-alt {
+  margin-right: 10px;
+}
+
+.section__title {
+  margin: 30px 0 30px 0;
+}
+
+.presentation {
+  padding: 30px 0 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f6f6f6;
+}
+.presentation__btn {
+  border-radius: 40px;
+  border: 1px solid #9356DC;
+  padding: 20px 30px 20px 30px;
+  background-color: #9356DC;
+}
+.presentation__btn a {
+  color: white;
+}
+
+/*Page index - section OPERATION - "fonctionnement"*/
+.operation__step-num {
+  position: absolute;
+  color: #fff;
+  padding: 10px 14px 5px 14px;
+  border-radius: 30px;
+  background-color: #9356DC;
+}
+.operation__step__container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  box-shadow: 3px 3px 10px #d5d5d5;
+  margin: 20px 0 0 20px;
+  height: 80px;
+  width: 60%;
+}
+.operation__step i {
+  padding: 0 30px 0 50px;
+}
 
 /*# sourceMappingURL=style.css.map */

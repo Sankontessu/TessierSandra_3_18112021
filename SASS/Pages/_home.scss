@@ -1,0 +1,67 @@
+/* page INDEX */
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #eaeaea;
+    box-shadow:inset 0px 5px 3px #d5d5d5; /*bordure intérieure*/
+    
+    .fa-map-marker-alt{
+        margin-right: 10px;
+    }
+}
+
+.section__title {
+    margin: 30px 0 30px 0;
+  }
+
+.presentation{
+    padding: 30px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f6f6f6;
+
+    &__btn{
+        border-radius: 40px;
+        border: 1px solid #9356DC; 
+        padding: 20px 30px 20px 30px;
+        background-color: #9356DC;  
+            a{
+            color: rgb(255, 255, 255);
+            }
+    }
+}
+
+/*Page index - section OPERATION - "fonctionnement"*/
+
+.operation__step{
+    &-num{
+        position: absolute;
+        color: #fff;
+        padding: 10px 14px 5px 14px;
+        border-radius: 30px;
+        background-color:#9356DC; 
+    }
+
+    &__container{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        border-radius: 20px;
+        background-color: #f6f6f6;    
+        box-shadow: 3px 3px 10px #d5d5d5;
+        margin: 20px 0 0 20px;
+        height: 80px;
+        width: 60%;
+    }
+
+    i{
+        padding: 0 30px 0 50px;
+    }
+
+}
+
