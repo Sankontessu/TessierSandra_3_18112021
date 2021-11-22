@@ -1,10 +1,22 @@
 /*HEADER - INDEX*/
-#header__logo{
+.header__logo{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px 0 20px 0;
        }
+
+/* Si moins de 768px RESPONSIVE TELEPHONE */ 
+@media screen and (max-width:768px) {
+    .logo{
+        width: 50%;
+    }
+
+
+
+
+    
+}
 
 /* HEADER MENU */
 

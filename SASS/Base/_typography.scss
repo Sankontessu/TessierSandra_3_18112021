@@ -8,44 +8,106 @@ p{
     font-size: 1.2rem;
 }
 
-
 /* TYPO Caractéristiques INDEX */
 h1{
     font-size: 1.8rem;
     font-weight: bold;
 }
 
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+i{
+    font-size: 1.5rem;
+      }
+
+/* titre des sections - index */
 .section__title {
     font-size: 1.8rem;
     font-weight: bold;
     }  
 
-.presentation__text{
-    font-size: 1.5rem;  
+/* section PRESENTATION */
+.presentation{
+    &__text{
+        font-size: 1.5rem; 
+    }
+    &__btn{
+        a{
+        color: rgb(255, 255, 255);
+        }
+    }
 }
 
-a{
-    text-decoration: none;
-}
-
-/*section OPERATION "fonctionnement"*/
+/*section OPERATION "fonctionnement" - index */
 .operation{
-
     i{
-        font-size: 1.5rem;
         color: #7e7e7e;
     }
 
     &__step__container-title{
         font-weight: bold;
     }
+    &__step-num{
+        color: #fff;
+    }
 }
 
+/* section RESTAURANT - index */
+.card{
+    font-size: 1.0rem;
+       
+    .new__text{
+        font-size: 0.9rem;
+        font-weight: bold;  
+    }
 
+    .fa-heart{
+        font-size: 1.5rem;
+    }
 
+    &__text-title{
+        font-weight: bold;     
+    } 
+ }
 
+ /* FOOTER */
+ .footer__logo-text{   
+    font-family:'Shrikhand';
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+}
 
+.mention li a {
+    color: #fff;
+    i{
+        font-size: 1rem;
+    }
+}
+
+/*--------------------*/
 /* TYPO MENU */
 .restaurant__name{
     font-family: 'Shrikhand', cursive;
+}
+
+
+/* Si moins de 768px RESPONSIVE TELEPHONE */ 
+@media screen and (max-width:768px) {
+
+    h1, .section__title{
+        font-size: 1.5rem;
+        }
+
+    .presentation__text{
+        font-size: 1.2rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+
+   
 }

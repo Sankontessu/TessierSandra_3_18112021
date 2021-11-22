@@ -1,9 +1,9 @@
 /* page INDEX */
+
 .location {
     display: flex;
     justify-content: center;
     align-items: center;
-    
     background-color: #eaeaea;
     box-shadow:inset 0px 5px 3px #d5d5d5; /*bordure intérieure*/
     
@@ -13,55 +13,178 @@
 }
 
 .section__title {
-    margin: 30px 0 30px 0;
+    margin: 20px 0 0px 0;
   }
 
 .presentation{
     padding: 30px 0 50px 0;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: #f6f6f6;
 
     &__btn{
         border-radius: 40px;
+        box-shadow: 3px 3px 10px #8d8d8d;
         border: 1px solid #9356DC; 
         padding: 20px 30px 20px 30px;
-        background-color: #9356DC;  
-            a{
-            color: rgb(255, 255, 255);
-            }
+        background-color: #9356DC;       
     }
 }
 
 /*Page index - section OPERATION - "fonctionnement"*/
 
+.operation{
+    margin: 30px 0 30px 0;
+}
+
+.section__title{
+    display: flex;
+    justify-content: center;  
+}
+
+.bloc__operation__step{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .operation__step{
+    position: relative;
+    margin: 20px 0 20px 0;
+
     &-num{
-        position: absolute;
-        color: #fff;
-        padding: 10px 14px 5px 14px;
-        border-radius: 30px;
-        background-color:#9356DC; 
+        position: absolute; 
+        top: -10%;
+        left: 0%;    
+       
+        .text-num{
+            padding: 10px 14px 5px 14px;
+            border-radius: 30px;
+            background-color:#9356DC; 
+        }
     }
 
     &__container{
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
-
+        justify-content: center;
+        align-items: baseline;
+    
         border-radius: 20px;
         background-color: #f6f6f6;    
         box-shadow: 3px 3px 10px #d5d5d5;
-        margin: 20px 0 0 20px;
-        height: 80px;
-        width: 60%;
-    }
+        margin: 0 0 0 20px;
+        height: 70px;
+        width: 300px;
+        
+        i{
+            padding: 0 20px 0 20px;
+        }   
 
-    i{
-        padding: 0 30px 0 50px;
-    }
-
+     }   
 }
+
+
+
+/*page index - section RESTAURANT */ 
+
+#restaurant{
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container__card{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;  
+    margin-bottom: 40px;
+    /*width: 100%;*/
+}
+
+.card {
+    width: 35%;
+    max-height: 60%; 
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 6px 6px 10px rgb(150, 150, 150);
+    margin: 20px 20px 0 20px;
+
+    &__photo__menu{
+        position:relative;
+                           
+        .photo{
+        width: 100%;
+        height: 300px;
+        object-fit: cover; /*adapte la photo au ratio*/
+        overflow : hidden; 
+        border-radius: 23px 23px 0px 0px;           
+        }
+
+        .new{
+            position: absolute;
+            top: 10%;
+            right: 10%;
+
+            &__text{
+                background-color: #99E2D0;
+                color:#008766;
+                padding: 5px;
+            }
+        }
+    }
+
+    &__text{
+        position: relative;
+        padding-left: 20px;
+
+        &-title, &-address{
+            line-height: 0.5rem; /*hauteur boite de la ligne*/
+        }
+  
+        .card__icone{
+            position: absolute;
+            top: 20%;
+            right: 15%;
+        }
+    }
+}
+
+/******Media Queries INDEX ****/
+/* Si moins 992px = RESPONSIVE TABLETTE */
+@media screen and (max-width: 992px)
+{
+    /***Section OPERATION -- "fonctionneemnt" ***/
+    .bloc__operation__step{
+        flex-direction: column; 
+        }     
+}
+
+
+   /*--------------------------------------------------*/    
+/* Si moins de 768px RESPONSIVE TELEPHONE */ 
+@media screen and (max-width:767px) {
+
+    .presentation{
+        text-align:center;
+        h1 {
+            padding: 0px 40px 0px 40px;  
+        }
+    }
+
+    .container__card{
+        flex-direction: column;
+    }
+
+    .card{
+        width: 88%;
+    }
+
+    .card__photo__menu .photo{
+        height: 180px;
+    }
+}
+
+   /*---------------------------*/
 
