@@ -1,5 +1,6 @@
 /*HEADER - INDEX*/
 .header__logo{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,14 +11,19 @@
 @media screen and (max-width:768px) {
     .logo{
         width: 50%;
-    }
-
-
-
-
-    
+    }   
 }
 
-/* HEADER MENU */
+/* HEADER CARD menu */
+.back{
+    position: absolute;
+    left: 3%;
+}
 
-
+/* Si moins de 768px RESPONSIVE TELEPHONE */ 
+@media screen and (max-width:768px) {
+    .logo{
+        width: 50%;
+    }   
+  
+}

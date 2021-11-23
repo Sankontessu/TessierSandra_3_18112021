@@ -1,0 +1,115 @@
+/* CARD - menurestaurant*/
+
+/*centrer dans la page
+.main__menu{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+  }*/
+
+.photo-menu{
+    width:375px ;
+    height: 260px;
+}
+.menu{
+    width: 375px;
+    background-color: #f6f6f6 ;
+    border-radius: 25px 25px 0 0;    
+    padding: 0 0 0 20px;
+}
+
+.menu__title__container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;   
+
+    .menu__icone{
+       margin-left: 70px;
+    }
+}
+
+.menu__title span{
+    border-bottom: 2px solid #99E2D0;
+}
+
+.starter--1, .starter--2, .starter--3 {
+    width: 345px;
+    height: 70px; 
+   
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px #d5d5d5;
+    padding-left: 20px;
+    margin-bottom: 25px;
+   }
+
+.starter__content{
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;    
+}
+
+.entitle__content{
+    position: relative;
+    display: flex;   
+}
+.entitle__price{
+    position: absolute;
+    top: 0px;
+    right: 25px;
+}
+
+/*disparition icone valide*/
+.card__valid{
+    display: none;
+    position:absolute;
+    top: 0px;
+    right: 25px;
+    color: #fff;   
+    background-color:#99E2D0 ;
+    
+}
+
+
+
+/*.card__valid:hover{
+
+      }*/
+
+
+
+/****** ANIMATION - apparition carte menu****/
+
+@keyframes slideDown{
+    from{
+        transform: translateY(200px);
+        opacity: 0;
+    }
+   to {
+    transform: translateY(0);
+    opacity: 1;
+   }
+}
+.container__starter, .starter--1, .plate--1, .dessert--1{
+   transition: 5s;
+   animation: slideDown 2s 1;
+}
+
+.container__plate,.starter--2, .plate--2, .dessert--2{
+    transition: 3s;
+    animation: slideDown 2.5s 1 ;
+ }
+
+.container__dessert,.starter--3, .plate--3, .dessert--3{
+    animation-delay: 2s;
+    animation: slideDown 3s 1;
+ }
+/***************************************/
+
+
+
+
+
+
+

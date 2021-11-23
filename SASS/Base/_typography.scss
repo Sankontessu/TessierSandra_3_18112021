@@ -43,16 +43,10 @@ i{
 
 /*section OPERATION "fonctionnement" - index */
 .operation{
-    i{
-        color: #7e7e7e;
-    }
-
     &__step__container-title{
         font-weight: bold;
     }
-    &__step-num{
-        color: #fff;
-    }
+   
 }
 
 /* section RESTAURANT - index */
@@ -62,10 +56,6 @@ i{
     .new__text{
         font-size: 0.9rem;
         font-weight: bold;  
-    }
-
-    .fa-heart{
-        font-size: 1.5rem;
     }
 
     &__text-title{
@@ -87,12 +77,6 @@ i{
     }
 }
 
-/*--------------------*/
-/* TYPO MENU */
-.restaurant__name{
-    font-family: 'Shrikhand', cursive;
-}
-
 
 /* Si moins de 768px RESPONSIVE TELEPHONE */ 
 @media screen and (max-width:768px) {
@@ -107,7 +91,48 @@ i{
 
     p{
         font-size: 1rem;
-    }
+    }  
+}
 
-   
+/*Typo page menu restaurant - CARD */
+
+.fa-arrow-left{
+    font-size: 2rem;
+}
+
+/*--------------------*/
+/* TYPO MENU */
+.restaurant__name{
+    font-family: 'Shrikhand', cursive;
+    font-size: 2rem;
+}
+
+.menu__title{
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.entitle, .entitle__price{
+    font-weight: bold;
+    font-size: 1.2rem;
+
+    &__add{
+        font-weight: normal;
+        font-size: 0.9rem;
+    }
+}
+
+.btn__buy p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+
+}
+
+/* Si moins de 768px RESPONSIVE TELEPHONE */ 
+@media screen and (max-width:768px) {
+
+    .fa-arrow-left{
+        font-size: 1.5rem;
+    }
 }

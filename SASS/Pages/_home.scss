@@ -14,7 +14,7 @@
 
 .section__title {
     margin: 20px 0 0px 0;
-  }
+}
 
 .presentation{
     padding: 30px 0 50px 0;
@@ -26,9 +26,13 @@
     &__btn{
         border-radius: 40px;
         box-shadow: 3px 3px 10px #8d8d8d;
-        border: 1px solid #9356DC; 
         padding: 20px 30px 20px 30px;
-        background-color: #9356DC;       
+        background: linear-gradient(#ef74da,#9356DC); 
+        opacity: 1;
+    }
+
+    &__btn:hover{
+        opacity: 0.8;
     }
 }
 
@@ -57,18 +61,20 @@
         position: absolute; 
         top: -10%;
         left: 0%;    
+        color: #fff;
+        } 
        
         .text-num{
             padding: 10px 14px 5px 14px;
             border-radius: 30px;
             background-color:#9356DC; 
         }
-    }
+    
 
     &__container{
         display: flex;
         justify-content: center;
-        align-items: baseline;
+        align-items: center;
     
         border-radius: 20px;
         background-color: #f6f6f6;    
@@ -77,16 +83,22 @@
         height: 70px;
         width: 300px;
         
-        i{
+        i{    
+            color: #7e7e7e;          
             padding: 0 20px 0 20px;
         }   
+     }  
 
-     }   
-}
+    &__container:hover>i{         
+        color:#9356DC;     
+    } 
+    &__container:hover{
+        background-color:#f5edff;    
+    } 
+} 
 
 
-
-/*page index - section RESTAURANT */ 
+ /*page index - section RESTAURANT */ 
 
 #restaurant{
     background-color: #f6f6f6;
@@ -100,7 +112,6 @@
     justify-content: center;
     flex-flow: row wrap;  
     margin-bottom: 40px;
-    /*width: 100%;*/
 }
 
 .card {
@@ -147,9 +158,20 @@
             position: absolute;
             top: 20%;
             right: 15%;
+            color:inherit;
+                               
+           /* transition: color 1s;  */
+            
+            &:hover{
+                background: linear-gradient(#ef74da,#9356DC); 
+                background-clip:text;
+                -webkit-background-clip:text;
+                color:transparent;               
+            }
         }
     }
 }
+
 
 /******Media Queries INDEX ****/
 /* Si moins 992px = RESPONSIVE TABLETTE */
@@ -185,6 +207,3 @@
         height: 180px;
     }
 }
-
-   /*---------------------------*/
-
