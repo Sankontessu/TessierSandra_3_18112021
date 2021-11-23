@@ -246,16 +246,6 @@ footer .mention a:hover {
 
       }*/
 /****** ANIMATION - apparition carte menu****/
-@keyframes slideDown {
-  from {
-    transform: translateY(200px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 .container__starter, .starter--1, .plate--1, .dessert--1 {
   transition: 5s;
   animation: slideDown 2s 1;
@@ -271,6 +261,16 @@ footer .mention a:hover {
   animation: slideDown 3s 1;
 }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /***************************************/
 /* page INDEX */
 .location {
