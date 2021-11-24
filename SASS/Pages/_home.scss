@@ -1,5 +1,5 @@
 /* page INDEX */
-
+/*barre de localisation*/
 .location {
     display: flex;
     justify-content: center;
@@ -12,6 +12,7 @@
     }
 }
 
+/*bloc Présentation*/
 .section__title {
     margin: 20px 0 0px 0;
 }
@@ -27,17 +28,16 @@
         border-radius: 40px;
         box-shadow: 3px 3px 10px #8d8d8d;
         padding: 20px 30px 20px 30px;
-        background: linear-gradient(#ef74da,#9356DC); 
-        opacity: 1;
-    }
-
-    &__btn:hover{
-        opacity: 0.8;
+        background: linear-gradient(#ef74da,#9356dc);               
+        transition: transform .5s;
+                    
+        &:hover{
+            transform: scale(0.9);
+         }
     }
 }
 
 /*Page index - section OPERATION - "fonctionnement"*/
-
 .operation{
     margin: 30px 0 30px 0;
 }
@@ -70,7 +70,6 @@
             background-color:#9356DC; 
         }
     
-
     &__container{
         display: flex;
         justify-content: center;
@@ -82,24 +81,26 @@
         margin: 0 0 0 20px;
         height: 70px;
         width: 300px;
+
+        transition: background-color .5s; 
         
         i{    
             color: #7e7e7e;          
             padding: 0 20px 0 20px;
+            transition: color .5s;
         }   
      }  
 
     &__container:hover>i{         
-        color:#9356DC;     
+        color:#9356DC;            
     } 
     &__container:hover{
-        background-color:#f5edff;    
+        background-color:#f5edff;            
     } 
 } 
 
 
  /*page index - section RESTAURANT */ 
-
 #restaurant{
     background-color: #f6f6f6;
     display: flex;
@@ -156,28 +157,28 @@
     }
 }
 
-/*icone coeur - transition couleur*/
-
+    /*icone coeur - transition couleur*/
 .fa-heart{
     position: absolute;
     top: 20%;
     right: 15%; 
-    cursor: pointer;   
+    cursor: pointer;       
 }
-
-.colorempty:hover{
-    background-image: linear-gradient(#ef74da,#9356DC);
+/*    
+.colorempty:hover{   
+   
+   /* background-image: linear-gradient(175deg,#9356DC,#ef74da);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
-}
+}*/
 
 .colorfull{
-    transition: opacity 0.75s;
+    transition: opacity 0.80s;
     opacity: 0;  
 
-    background-image: linear-gradient(#ef74da,#9356DC);
+    background-image: linear-gradient(175deg,#9356DC,#ef74da);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
@@ -190,7 +191,6 @@
 
 
 
-
 /******Media Queries INDEX ****/
 /* Si moins 992px = RESPONSIVE TABLETTE */
 @media screen and (max-width: 992px)
@@ -200,9 +200,7 @@
         flex-direction: column; 
         }     
 }
-
-
-   /*--------------------------------------------------*/    
+  
 /* Si moins de 768px RESPONSIVE TELEPHONE */ 
 @media screen and (max-width:767px) {
 

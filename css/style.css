@@ -151,6 +151,17 @@ i {
     width: 50%;
   }
 }
+.section {
+  font-family: sans-serif;
+  font-size: 5rem;
+  color: #9356dc;
+  text-align: center;
+  background-color: #008766;
+  height: 500px;
+  line-height: 500px;
+}
+
+/*----------LOADER Quart de cercle----------*/
 footer {
   background-color: #353535;
   padding-bottom: 30px;
@@ -168,11 +179,11 @@ footer .mention {
 footer .mention i {
   margin-right: 10px;
 }
-footer .mention a:hover {
-  border-bottom: 1px solid #fff;
+footer .mention li a:hover {
+  font-weight: bold;
 }
 
-/* CARD - menurestaurant*/
+/* CARD - menu-restaurant*/
 /*centrer dans la page
 .main__menu{
     position: absolute;
@@ -180,11 +191,13 @@ footer .mention a:hover {
     left:50%;
     transform: translateX(-50%) translateY(-50%);
   }*/
+/*Photo menu*/
 .photo-menu {
   width: 375px;
   height: 260px;
 }
 
+/**carte menu**/
 .menu {
   width: 375px;
   background-color: #f6f6f6;
@@ -192,20 +205,42 @@ footer .mention a:hover {
   padding: 0 0 0 20px;
 }
 
+/* titre restaurant + coeur*/
 .menu__title__container {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
 }
-.menu__title__container .menu__icone {
-  margin-left: 70px;
-}
 
+/*soulignement letttes*/
 .menu__title span {
   border-bottom: 2px solid #99E2D0;
 }
 
-.starter--1, .starter--2, .starter--3 {
+/**Animation coeur**/
+.menu__icone {
+  position: absolute;
+  top: 38%;
+  right: 15%;
+  cursor: pointer;
+}
+
+.colorfull {
+  transition: opacity 0.8s;
+  opacity: 0;
+  background-image: linear-gradient(175deg, #9356DC, #ef74da);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+.colorfull:hover {
+  opacity: 1;
+}
+
+/*style des intitilés*/
+.starter--1, .starter--2, .starter--3, .plate--1, .plate--2, .plate--2, .plate--3, .dessert--1, .dessert--2, .dessert--3 {
   width: 345px;
   height: 70px;
   background-color: #fff;
@@ -242,9 +277,6 @@ footer .mention a:hover {
   background-color: #99E2D0;
 }
 
-/*.card__valid:hover{
-
-      }*/
 /****** ANIMATION - apparition carte menu****/
 .container__starter, .starter--1, .plate--1, .dessert--1 {
   transition: 5s;
@@ -271,8 +303,8 @@ footer .mention a:hover {
     opacity: 1;
   }
 }
-/***************************************/
 /* page INDEX */
+/*barre de localisation*/
 .location {
   display: flex;
   justify-content: center;
@@ -285,6 +317,7 @@ footer .mention a:hover {
   margin-right: 10px;
 }
 
+/*bloc Présentation*/
 .section__title {
   margin: 20px 0 0px 0;
 }
@@ -300,11 +333,11 @@ footer .mention a:hover {
   border-radius: 40px;
   box-shadow: 3px 3px 10px #8d8d8d;
   padding: 20px 30px 20px 30px;
-  background: linear-gradient(#ef74da, #9356DC);
-  opacity: 1;
+  background: linear-gradient(#ef74da, #9356dc);
+  transition: transform 0.5s;
 }
 .presentation__btn:hover {
-  opacity: 0.8;
+  transform: scale(0.9);
 }
 
 /*Page index - section OPERATION - "fonctionnement"*/
@@ -348,10 +381,12 @@ footer .mention a:hover {
   margin: 0 0 0 20px;
   height: 70px;
   width: 300px;
+  transition: background-color 0.5s;
 }
 .operation__step__container i {
   color: #7e7e7e;
   padding: 0 20px 0 20px;
+  transition: color 0.5s;
 }
 .operation__step__container:hover > i {
   color: #9356DC;
@@ -421,18 +456,19 @@ footer .mention a:hover {
   cursor: pointer;
 }
 
-.colorempty:hover {
-  background-image: linear-gradient(#ef74da, #9356DC);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
+/*    
+.colorempty:hover{   
 
+   /* background-image: linear-gradient(175deg,#9356DC,#ef74da);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}*/
 .colorfull {
-  transition: opacity 0.75s;
+  transition: opacity 0.8s;
   opacity: 0;
-  background-image: linear-gradient(#ef74da, #9356DC);
+  background-image: linear-gradient(175deg, #9356DC, #ef74da);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -450,7 +486,6 @@ footer .mention a:hover {
     flex-direction: column;
   }
 }
-/*--------------------------------------------------*/
 /* Si moins de 768px RESPONSIVE TELEPHONE */
 @media screen and (max-width: 767px) {
   .presentation {
