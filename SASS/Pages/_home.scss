@@ -66,7 +66,7 @@
        
         .text-num{
             padding: 10px 14px 5px 14px;
-            border-radius: 30px;
+            border-radius: 50%;
             background-color:#9356DC; 
         }
     
@@ -152,25 +152,43 @@
 
         &-title, &-address{
             line-height: 0.5rem; /*hauteur boite de la ligne*/
-        }
-  
-        .card__icone{
-            position: absolute;
-            top: 20%;
-            right: 15%;
-            color:inherit;
-                               
-           /* transition: color 1s;  */
-            
-            &:hover{
-                background: linear-gradient(#ef74da,#9356DC); 
-                background-clip:text;
-                -webkit-background-clip:text;
-                color:transparent;               
-            }
-        }
+        }        
     }
 }
+
+/*icone coeur - transition couleur*/
+
+.fa-heart{
+    position: absolute;
+    top: 20%;
+    right: 15%; 
+    cursor: pointer;   
+}
+
+.colorempty:hover{
+    background-image: linear-gradient(#ef74da,#9356DC);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+.colorfull{
+    transition: opacity 0.75s;
+    opacity: 0;  
+
+    background-image: linear-gradient(#ef74da,#9356DC);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+
+    &:hover{
+        opacity : 1;       
+    }    
+}
+
+
 
 
 /******Media Queries INDEX ****/

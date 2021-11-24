@@ -335,7 +335,7 @@ footer .mention a:hover {
 }
 .operation__step .text-num {
   padding: 10px 14px 5px 14px;
-  border-radius: 30px;
+  border-radius: 50%;
   background-color: #9356DC;
 }
 .operation__step__container {
@@ -412,18 +412,34 @@ footer .mention a:hover {
   line-height: 0.5rem;
   /*hauteur boite de la ligne*/
 }
-.card__text .card__icone {
+
+/*icone coeur - transition couleur*/
+.fa-heart {
   position: absolute;
   top: 20%;
   right: 15%;
-  color: inherit;
-  /* transition: color 1s;  */
+  cursor: pointer;
 }
-.card__text .card__icone:hover {
-  background: linear-gradient(#ef74da, #9356DC);
-  background-clip: text;
+
+.colorempty:hover {
+  background-image: linear-gradient(#ef74da, #9356DC);
   -webkit-background-clip: text;
-  color: transparent;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.colorfull {
+  transition: opacity 0.75s;
+  opacity: 0;
+  background-image: linear-gradient(#ef74da, #9356DC);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+.colorfull:hover {
+  opacity: 1;
 }
 
 /******Media Queries INDEX ****/
