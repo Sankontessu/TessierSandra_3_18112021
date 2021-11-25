@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*durée transition*/
+/*opacité des éléments*/
+/*shadow*/
 /* TYPO GENERALES */
 body {
   font-family: roboto;
@@ -124,6 +127,11 @@ i {
 /*************** BUTTONS Caractéristiques GENERALES ***************/
 /*************** BUTTONS Caractéristiques INDEX ***************/
 /*************** BUTTONS Caractéristiques MENU ***************/
+header {
+  position: relative;
+  z-index: 1;
+}
+
 /*HEADER - INDEX*/
 .header__logo {
   position: relative;
@@ -152,37 +160,50 @@ i {
   }
 }
 .section {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Shrikhand";
-  color: white;
+  color: #9356dc;
   font-size: 5rem;
   text-align: center;
-  background-color: #008766;
-  height: 500px;
-  line-height: 500px;
+  background-color: rgba(255, 255, 255, 0.8);
+  /*transparence*/
+  /*  animation: opening 1s 2.9s forwards;*/
 }
 
+/*animation
+@keyframes opening{
+    0%{
+        overflow: visible ;
+    }
+    100%{
+        overflow:hidden;
+    }
+}*/
+/*figure de base*/
 .loader {
+  position: relative;
   width: 50px;
   height: 50px;
   display: inline-block;
   vertical-align: middle;
-  position: relative;
-}
-
-.loader {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
+  margin-right: 10px;
 }
 
 /*----------LOADER Quart de cercle----------*/
+/*création du cercle*/
 .loader-quart {
   border-radius: 50px;
-  border: 6px solid rgba(255, 255, 255, 0.4);
+  border: 6px solid rgba(147, 86, 220, 0.4);
 }
 
+/*élément pour mouvement*/
 .loader-quart:after {
   content: "";
   position: absolute;
@@ -192,10 +213,11 @@ i {
   right: -6px;
   border-radius: 50px;
   border: 6px solid transparent;
-  border-top-color: #fff;
+  border-top-color: #9356dc;
   animation: spin 1s linear 0s infinite;
 }
 
+/*animation*/
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -205,6 +227,8 @@ i {
   }
 }
 footer {
+  position: relative;
+  z-index: 1;
   background-color: #353535;
   padding-bottom: 30px;
 }
@@ -281,7 +305,7 @@ footer .mention li a:hover {
   opacity: 1;
 }
 
-/*style des intitilés*/
+/*style des intitulés*/
 .starter--1, .starter--2, .starter--3, .plate--1, .plate--2, .plate--2, .plate--3, .dessert--1, .dessert--2, .dessert--3 {
   width: 345px;
   height: 70px;
@@ -345,6 +369,15 @@ footer .mention li a:hover {
     opacity: 1;
   }
 }
+body {
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+}
+
 /* page INDEX */
 /*barre de localisation*/
 .location {
@@ -372,14 +405,16 @@ footer .mention li a:hover {
   background-color: #f6f6f6;
 }
 .presentation__btn {
-  border-radius: 40px;
   box-shadow: 3px 3px 10px #8d8d8d;
+  border-radius: 40px;
   padding: 20px 30px 20px 30px;
   background: linear-gradient(#ef74da, #9356dc);
-  transition: transform 0.5s;
+  transition: opacity 0.5s;
+  opacity: 1;
 }
 .presentation__btn:hover {
-  transform: scale(0.9);
+  opacity: 0.8;
+  box-shadow: 3px 3px 10px #3f3f3f;
 }
 
 /*Page index - section OPERATION - "fonctionnement"*/
@@ -411,7 +446,7 @@ footer .mention li a:hover {
 .operation__step .text-num {
   padding: 10px 14px 5px 14px;
   border-radius: 50%;
-  background-color: #9356DC;
+  background-color: #9356dc;
 }
 .operation__step__container {
   display: flex;
@@ -431,10 +466,11 @@ footer .mention li a:hover {
   transition: color 0.5s;
 }
 .operation__step__container:hover > i {
-  color: #9356DC;
+  color: #9356dc;
 }
 .operation__step__container:hover {
   background-color: #f5edff;
+  box-shadow: 3px 3px 10px #3f3f3f;
 }
 
 /*page index - section RESTAURANT */
@@ -457,7 +493,7 @@ footer .mention li a:hover {
   max-height: 60%;
   background-color: white;
   border-radius: 25px;
-  box-shadow: 6px 6px 10px #969696;
+  box-shadow: 3px 3px 10px #8d8d8d;
   margin: 20px 20px 0 20px;
 }
 .card__photo__menu {
@@ -489,6 +525,9 @@ footer .mention li a:hover {
   line-height: 0.5rem;
   /*hauteur boite de la ligne*/
 }
+.card:hover {
+  box-shadow: 3px 3px 10px #3f3f3f;
+}
 
 /*icone coeur - transition couleur*/
 .fa-heart {
@@ -498,19 +537,15 @@ footer .mention li a:hover {
   cursor: pointer;
 }
 
-/*    
-.colorempty:hover{   
+.colorempty:hover {
+  border: 0px;
+}
 
-   /* background-image: linear-gradient(175deg,#9356DC,#ef74da);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
-}*/
 .colorfull {
   transition: opacity 0.8s;
   opacity: 0;
-  background-image: linear-gradient(175deg, #9356DC, #ef74da);
+  border: 0px;
+  background-image: linear-gradient(175deg, #9356dc, #ef74da);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;

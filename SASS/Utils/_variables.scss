@@ -1,0 +1,17 @@
+$primarycolor:#9356dc;
+
+/*durée transition*/
+$duration:.5s;
+
+/*opacité des éléments*/
+$opacitylight:0.8;
+
+/*shadow*/
+$colorsha0:#d5d5d5;
+$colorsha1:#8d8d8d;
+$colorsha2:rgb(63, 63, 63);
+
+$shadowlight: 3px 3px 10px $colorsha0;
+$shadowbasic: 3px 3px 10px $colorsha1;  
+$shadowdark: 3px 3px 10px $colorsha2;
+

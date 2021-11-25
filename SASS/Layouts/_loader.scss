@@ -1,35 +1,50 @@
 .section{
+    position: absolute;   
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+
+    overflow:hidden;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      
     font-family:'Shrikhand';
-    color: rgb(255, 255, 255);
+    color: $primarycolor;
     font-size: 5rem;    
     text-align: center;
-    background-color: #008766;
-    height:500px;
-    line-height: 500px;
+    background-color:rgb(255, 255, 255,.8);/*transparence*/    
+  /*  animation: opening 1s 2.9s forwards;*/
 }
 
+/*animation
+@keyframes opening{
+    0%{
+        overflow: visible ;
+    }
+    100%{
+        overflow:hidden;
+    }
+}*/
+
+/*figure de base*/
 .loader{
+    position: relative;
     width: 50px;
     height: 50px;
     display: inline-block;
-    vertical-align: middle;
-    position: relative;
-}
-
-.loader{
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
+    vertical-align: middle;  
+    margin-right: 10px;
 }
 
 /*----------LOADER Quart de cercle----------*/
+/*création du cercle*/
 .loader-quart{
     border-radius: 50px;
-    border: 6px solid rgba(255,255,255,0.4);
+    border: 6px solid rgb(147, 86, 220,0.4);
 }
-
+/*élément pour mouvement*/
 .loader-quart:after{
     content:'';
     position: absolute;
@@ -39,10 +54,11 @@
     right: -6px;
     border-radius: 50px;
     border:6px solid transparent;
-    border-top-color: #fff;
+    border-top-color:$primarycolor;
     animation: spin 1s linear 0s infinite;
 }
 
+/*animation*/
 @keyframes spin{
     0%{
         transform: rotate(0deg);
@@ -51,3 +67,4 @@
         transform: rotate(360deg);
     }
 }
+
