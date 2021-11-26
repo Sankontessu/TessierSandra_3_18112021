@@ -129,9 +129,22 @@ i {
 /*************** BUTTONS Caractéristiques MENU ***************/
 header {
   position: relative;
-  z-index: 1;
+  /* z-index: 2;    
+   animation: openingz $durationop forwards;*/
 }
 
+/*animation de charge
+@keyframes openingz{
+    0%{         
+        z-index: 1;     
+    }
+    50%{     
+        z-index: 1;     
+    }
+    100%{   
+        z-index: 2;  
+    }
+}*/
 /*HEADER - INDEX*/
 .header__logo {
   position: relative;
@@ -174,18 +187,24 @@ header {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
   /*transparence*/
-  /*  animation: opening 1s 2.9s forwards;*/
+  animation: opening 3.5s forwards;
 }
 
-/*animation
-@keyframes opening{
-    0%{
-        overflow: visible ;
-    }
-    100%{
-        overflow:hidden;
-    }
-}*/
+/*animation de charge*/
+@keyframes opening {
+  0% {
+    z-index: 2;
+    opacity: 1;
+  }
+  50% {
+    z-index: 2;
+    opacity: 1;
+  }
+  100% {
+    z-index: 1;
+    opacity: 0;
+  }
+}
 /*figure de base*/
 .loader {
   position: relative;
@@ -228,24 +247,39 @@ header {
 }
 footer {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   background-color: #353535;
   padding-bottom: 30px;
+  animation: openingz 3.5s forwards;
 }
-footer .footer__logo-text {
+
+/*animation de charge*/
+@keyframes openingz {
+  0% {
+    z-index: 1;
+  }
+  50% {
+    z-index: 1;
+  }
+  100% {
+    z-index: 3;
+  }
+}
+.footer__logo-text {
   padding-top: 30px;
   padding-left: 20px;
   margin: 0px;
 }
-footer .mention {
+
+.mention {
   padding-left: 20px;
   list-style: none;
   line-height: 1.5rem;
 }
-footer .mention i {
+.mention i {
   margin-right: 10px;
 }
-footer .mention li a:hover {
+.mention li a:hover {
   font-weight: bold;
 }
 
@@ -360,24 +394,37 @@ footer .mention li a:hover {
 }
 
 @keyframes slideDown {
-  from {
+  0% {
     transform: translateY(200px);
     opacity: 0;
   }
-  to {
+  100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
 body {
-  position: relative;
   margin: 0 auto;
-  z-index: 1;
+  position: relative;
+  z-index: 2;
   max-width: 1440px;
   width: 100%;
   height: 100%;
+  animation: openingz 3.5s forwards;
 }
 
+/*animation de charge*/
+@keyframes openingz {
+  0% {
+    z-index: 1;
+  }
+  50% {
+    z-index: 1;
+  }
+  100% {
+    z-index: 2;
+  }
+}
 /* page INDEX */
 /*barre de localisation*/
 .location {

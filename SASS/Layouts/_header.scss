@@ -1,7 +1,21 @@
 header{
     position: relative;
-    z-index: 1;
+   /* z-index: 2;    
+    animation: openingz $durationop forwards;*/
 }
+
+/*animation de charge
+@keyframes openingz{
+    0%{         
+        z-index: 1;     
+    }
+    50%{     
+        z-index: 1;     
+    }
+    100%{   
+        z-index: 2;  
+    }
+}*/
 
 /*HEADER - INDEX*/
 .header__logo{
@@ -10,7 +24,7 @@ header{
     justify-content: center;
     align-items: center;
     margin: 20px 0 20px 0;
-       }
+}
 
 /* Si moins de 768px RESPONSIVE TELEPHONE */ 
 @media screen and (max-width:768px) {
@@ -29,6 +43,5 @@ header{
 @media screen and (max-width:768px) {
     .logo{
         width: 50%;
-    }   
-  
+    }    
 }
