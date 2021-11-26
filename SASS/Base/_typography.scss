@@ -1,11 +1,12 @@
 /* TYPO GENERALES */
 body{
+    font-size: 100%;
     font-family: roboto;
     color: #000;
 }
 
 p{
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 /* TYPO Caractéristiques INDEX */
@@ -98,7 +99,7 @@ i{
 /*Typo page menu restaurant - CARD */
 
 .fa-arrow-left{
-    font-size: 2rem;
+    font-size: 5vw;
 }
 
 /*--------------------*/
@@ -113,14 +114,18 @@ i{
     font-size: 1.2rem;
 }
 
-.entitle, .entitle__price{
+.entitle{
     font-weight: bold;
     font-size: 1.2rem;
+}
 
-    &__add{
-        font-weight: normal;
-        font-size: 0.9rem;
-    }
+.entitle__add{
+    font-weight: normal;
+   font-size: 0.8rem;
+}
+
+.entitle__price{
+    font-size: 1.2rem;
 }
 
 .btn__buy p{
@@ -130,10 +135,7 @@ i{
 
 }
 
-/* Si moins de 768px RESPONSIVE TELEPHONE */ 
+/* Si moins de 768px RESPONSIVE TELEPHONE
 @media screen and (max-width:768px) {
 
-    .fa-arrow-left{
-        font-size: 1.5rem;
-    }
-}
+}*/

@@ -81,3 +81,19 @@
     }
 }
 
+/*Media queries*/
+/* Si moins 992px = RESPONSIVE TABLETTE 
+@media screen and (max-width: 992px) {
+
+}*/
+
+/* Si moins de 768px RESPONSIVE TELEPHONE */ 
+@media screen and (max-width:767px) {
+    .section{
+        font-size: 2rem;
+    }
+    .loader{
+        width:25px;
+        height:25px;  
+    }  
+}

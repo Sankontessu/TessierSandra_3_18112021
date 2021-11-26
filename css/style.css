@@ -4,12 +4,13 @@
 /*shadow*/
 /* TYPO GENERALES */
 body {
+  font-size: 100%;
   font-family: roboto;
   color: #000;
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 /* TYPO Caractéristiques INDEX */
@@ -88,7 +89,7 @@ i {
 }
 /*Typo page menu restaurant - CARD */
 .fa-arrow-left {
-  font-size: 2rem;
+  font-size: 5vw;
 }
 
 /*--------------------*/
@@ -103,13 +104,18 @@ i {
   font-size: 1.2rem;
 }
 
-.entitle, .entitle__price {
+.entitle {
   font-weight: bold;
   font-size: 1.2rem;
 }
-.entitle__add, .entitle__price__add {
+
+.entitle__add {
   font-weight: normal;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+}
+
+.entitle__price {
+  font-size: 1.2rem;
 }
 
 .btn__buy p {
@@ -118,15 +124,10 @@ i {
   color: #fff;
 }
 
-/* Si moins de 768px RESPONSIVE TELEPHONE */
-@media screen and (max-width: 768px) {
-  .fa-arrow-left {
-    font-size: 1.5rem;
-  }
-}
-/*************** BUTTONS Caractéristiques GENERALES ***************/
-/*************** BUTTONS Caractéristiques INDEX ***************/
-/*************** BUTTONS Caractéristiques MENU ***************/
+/* Si moins de 768px RESPONSIVE TELEPHONE
+@media screen and (max-width:768px) {
+
+}*/
 /*HEADER - INDEX*/
 .header__logo {
   display: flex;
@@ -233,8 +234,24 @@ i {
     transform: rotate(360deg);
   }
 }
+/*Media queries*/
+/* Si moins 992px = RESPONSIVE TABLETTE 
+@media screen and (max-width: 992px) {
+
+}*/
+/* Si moins de 768px RESPONSIVE TELEPHONE */
+@media screen and (max-width: 767px) {
+  .section {
+    font-size: 2rem;
+  }
+
+  .loader {
+    width: 25px;
+    height: 25px;
+  }
+}
 footer {
-  z-index: 2;
+  z-index: 3;
   background-color: #353535;
   padding-bottom: 30px;
 }
@@ -258,45 +275,51 @@ footer {
 }
 
 /* CARD - menu-restaurant*/
-/*centrer dans la page
-.main__menu{
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translateX(-50%) translateY(-50%);
-  }*/
 /*Photo menu*/
-.photo-menu {
-  width: 375px;
-  height: 260px;
+.main__menu__photo {
+  margin: 0;
+}
+.main__menu__photo--plat {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
 }
 
 /**carte menu**/
 .menu {
-  width: 375px;
+  position: relative;
   background-color: #f6f6f6;
   border-radius: 25px 25px 0 0;
   padding: 0 0 0 20px;
+  margin-top: -50px;
+  padding-bottom: 40px;
+}
+
+.menu__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 450px;
+}
+
+/*liste des containers*/
+.container__starter, .container__plate, .container__dessert {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
 }
 
 /* titre restaurant + coeur*/
-.menu__title__container {
+.menu__title {
   position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
-}
-
-/*soulignement letttes*/
-.menu__title span {
-  border-bottom: 2px solid #99E2D0;
+  padding-top: 20px;
 }
 
 /**Animation coeur**/
 .menu__icone {
   position: absolute;
-  top: 38%;
-  right: 15%;
+  top: 59px;
+  right: 10%;
   cursor: pointer;
 }
 
@@ -313,10 +336,13 @@ footer {
   opacity: 1;
 }
 
+/*soulignement letttes*/
+h2 span {
+  border-bottom: 2px solid #99E2D0;
+}
+
 /*style des intitulés*/
 .starter--1, .starter--2, .starter--3, .plate--1, .plate--2, .plate--2, .plate--3, .dessert--1, .dessert--2, .dessert--3 {
-  width: 345px;
-  height: 70px;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 3px 3px 10px #d5d5d5;
@@ -339,16 +365,6 @@ footer {
   position: absolute;
   top: 0px;
   right: 25px;
-}
-
-/*disparition icone valide*/
-.card__valid {
-  display: none;
-  position: absolute;
-  top: 0px;
-  right: 25px;
-  color: #fff;
-  background-color: #99E2D0;
 }
 
 /****** ANIMATION - apparition carte menu****/
@@ -375,6 +391,79 @@ footer {
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+/*disparition icone valide*/
+.card__valid {
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 25px;
+  color: #fff;
+  background-color: #99E2D0;
+}
+
+/* Bouton Commander*/
+.btn__buy {
+  /*
+  display: flex;
+  justify-content: center;
+  align-items: center;*/
+  position: absolute;
+  bottom: 50px;
+  width: 150px;
+  box-shadow: 3px 3px 10px #8d8d8d;
+  border-radius: 40px;
+  padding: 20px 30px 20px 30px;
+  background: linear-gradient(#ef74da, #9356dc);
+  transition: opacity 0.5s;
+  opacity: 1;
+  text-align: center;
+}
+.btn__buy a {
+  color: #fff;
+}
+.btn__buy:hover {
+  opacity: 0.8;
+  box-shadow: 3px 3px 10px #3f3f3f;
+}
+
+/*Media queries*/
+/* Si moins 992px = RESPONSIVE TABLETTE 
+@media screen and (max-width: 992px) {
+}
+
+/* Si moins de 768px RESPONSIVE TELEPHONE */
+@media screen and (max-width: 767px) {
+  .main__menu__photo--plat {
+    height: 260px;
+  }
+
+  .menu__icone {
+    top: 53px;
+  }
+
+  .menu__container {
+    display: block;
+    height: auto;
+  }
+
+  .container__starter, .container__plate, .container__dessert {
+    width: 95%;
+  }
+
+  .starter--1, .starter--2, .starter--3, .plate--1, .plate--2, .plate--2, .plate--3, .dessert--1, .dessert--2, .dessert--3 {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px #d5d5d5;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    height: 70px;
+  }
+
+  .btn__buy {
+    position: relative;
+    bottom: 0;
   }
 }
 body {
