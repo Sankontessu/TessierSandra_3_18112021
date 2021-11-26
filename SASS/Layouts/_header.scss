@@ -1,29 +1,15 @@
-header{
-    position: relative;
-   /* z-index: 2;    
-    animation: openingz $durationop forwards;*/
-}
-
-/*animation de charge
-@keyframes openingz{
-    0%{         
-        z-index: 1;     
-    }
-    50%{     
-        z-index: 1;     
-    }
-    100%{   
-        z-index: 2;  
-    }
-}*/
-
 /*HEADER - INDEX*/
 .header__logo{
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px 0 20px 0;
+}
+
+/* HEADER CARD menu */
+.back{
+    position: absolute;
+    left: 3%;
 }
 
 /* Si moins de 768px RESPONSIVE TELEPHONE */ 
@@ -31,12 +17,6 @@ header{
     .logo{
         width: 50%;
     }   
-}
-
-/* HEADER CARD menu */
-.back{
-    position: absolute;
-    left: 3%;
 }
 
 /* Si moins de 768px RESPONSIVE TELEPHONE */ 

@@ -1,26 +1,8 @@
 footer{
-    position: relative;
-    z-index: 3;
-    
+    z-index: 2;    
     background-color: #353535;
-    padding-bottom: 30px;
-    animation: openingz $durationop forwards;
+    padding-bottom: 30px;  
 }
-
-/*animation de charge*/
-@keyframes openingz{
-    0%{         
-        z-index: 1;     
-    }
-    50%{     
-        z-index: 1;     
-    }
-    100%{   
-        z-index: 3;  
-    }
-}
-
-
 
 .footer__logo-text{
     padding-top: 30px;
