@@ -59,14 +59,16 @@
     -moz-text-fill-color: transparent;
 
     &:hover{
-        opacity : 1;       
-    }    
+        opacity : 1; 
+    }  
 }
+
 
 /*soulignement letttes*/
 h2 span{
     border-bottom: 2px solid #99E2D0;
 }
+
 
 /*style des intitulés*/
 .starter--1, .starter--2, .starter--3,.plate--1, .plate--2, .plate--2,.plate--3, .dessert--1, .dessert--2, .dessert--3 {
@@ -77,70 +79,180 @@ h2 span{
     margin-bottom: 25px;
 }
 
-.starter__content{
+/****** PARTIE STRUCTURE ANIMATION DU PRIX
+/*.starter__content{
     display: flex;
     flex-direction: column;
     line-height: 0px;    
+}*/
+/*
+.entitle__price{
+    position: absolute;
+    top: 0px;
+    right: 25px;
+
 }
 
 .entitle__content{
     position: relative;
     display: flex;   
+    flex-direction: row;
+    justify-content: flex-start;   
 }
 
-.entitle__price{
-    position: absolute;
+.entitle__content:hover{  
+    animation: push 5s;
+}
+/* animation pousser le prix*
+@keyframes push{
+    0%{
+        margin-right: 0px;
+    }
+    100%{
+        margin-right:60px;
+    }
+}
+
+/*icone validation*
+.card__valid{    
+   position:absolute;
     top: 0px;
-    right: 25px;
+    right: -45px;    
+
+    color: #fff;   
+    background-color:#99E2D0 ; 
+    opacity: 1;   
+   }
+
+/****** ANIMATION - icone validation*
+animation: 3s ease-in 1s forwards slidein;  
+
+
+ @-webkit-keyframes slidein {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+              opacity: 0;           
+    }
+    30% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+                opacity: 1;           
+      }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+              opacity: 1;            
+    }
+}**/
+
+
+/*** essai aniamtion 2***/
+.starter--1{
+    overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
-/****** ANIMATION - apparition carte menu****/
-.container__starter, .starter--1, .plate--1, .dessert--1{
+/*icone validation*/
+.card__valid{      
+    
+    background: #99E2D0;
+    color: #fff;
+    border-radius: 0 15px 15px 0;
+
+    padding-left: 60px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    overflow: hidden;
+    /*
+    visibility: hidden;
+    transform: translate(75px);
+    transition: all 350ms ease-in-out;
+
+
+    i{
+    transition-duration: 1s;
+    transform: rotate(0deg);
+    }*/
+}
+
+.card__content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 0 0.1rem 1rem;
+
+    .entitle{
+    margin: 10px 0 0 0;
+   
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+}
+
+.entitle__content{
+    display: flex;
+    justify-content: space-between;
+  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.entitle__add, .entitle__price{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/****** ANIMATION - apparition carte menu***/
+.container__starter, .starter--1, .starter--2, .starter--3{
    transition: 5s;
    animation: slideDown 2s 1;
 }
 
-.container__plate,.starter--2, .plate--2, .dessert--2{
-    transition: 3s;
-    animation: slideDown 2.5s 1 ;
+.container__plate, .plate--1, .plate--2, .plate--3{
+    transition: 5s;
+      animation: slideDown 3s 1;
  }
 
-.container__dessert,.starter--3, .plate--3, .dessert--3{
-    animation-delay: 2s;
-    animation: slideDown 3s 1;
+.container__dessert,.dessert--1, .dessert--2,.dessert--3{
+    transition: 5s;   
+    animation: slideDown 4s 1;
  }
 
  @keyframes slideDown{
     0%{
-        transform: translateY(200px);
+        transform: translateY(30px);
         opacity: 0;
     }
 
    100%{
-    transform: translateY(0);
-    opacity: 1;
+        transform: translateY(0);
+        opacity: 1;
    }
 }
 
-/*disparition icone valide*/
-.card__valid{
-    display: none;
-    position:absolute;
-    top: 0px;
-    right: 25px;
-    color: #fff;   
-    background-color:#99E2D0 ; 
+/* Bouton Commander*/
+
+.placement__btn{
+    display: flex;
+    justify-content: center;
+    margin-right:20px;
+  
 }
 
-/* Bouton Commander*/
-.btn__buy{
-/*
-display: flex;
-justify-content: center;
-align-items: center;*/
-    
-    position: absolute; 
-    bottom: 50px;
+.btn__buy{    
     width:150px;
     box-shadow: $shadowbasic;       
     border-radius: 40px;
@@ -149,6 +261,7 @@ align-items: center;*/
     transition: opacity $duration;
     opacity: 1;
     text-align: center;
+    
 
     a{        
         color:#fff;
@@ -193,9 +306,4 @@ align-items: center;*/
         margin-bottom: 25px;
         height:70px;
     }
-
-.btn__buy{
-    position:relative;
-    bottom: 0;
-}
 }
