@@ -12,19 +12,20 @@
 
 /**carte menu**/
 .menu{
-    position: relative;    
-    background-color: #f6f6f6 ;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+     background-color: #f6f6f6 ;
     border-radius: 25px 25px 0 0;    
     padding: 0 0 0 20px;
     margin-top: -50px;
-    padding-bottom: 40px;
+    padding-bottom: 40px;    
 }
 
 .menu__container{
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 450px; 
+    flex-direction: row;
+    justify-content: space-between;     
 }
 
 /*liste des containers*/
@@ -63,157 +64,23 @@
     }  
 }
 
-
 /*soulignement letttes*/
 h2 span{
     border-bottom: 2px solid #99E2D0;
 }
 
-
-/*style des intitulés*/
+/*style des vignettes*/
 .starter--1, .starter--2, .starter--3,.plate--1, .plate--2, .plate--2,.plate--3, .dessert--1, .dessert--2, .dessert--3 {
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 3px 3px 10px #d5d5d5;
     padding-left: 20px;
     margin-bottom: 25px;
-}
-
-/****** PARTIE STRUCTURE ANIMATION DU PRIX
-/*.starter__content{
-    display: flex;
-    flex-direction: column;
-    line-height: 0px;    
-}*/
-/*
-.entitle__price{
-    position: absolute;
-    top: 0px;
-    right: 25px;
-
-}
-
-.entitle__content{
+    overflow: hidden;
+    cursor: pointer;
     position: relative;
-    display: flex;   
-    flex-direction: row;
-    justify-content: flex-start;   
+    min-width: 17.5rem;
 }
-
-.entitle__content:hover{  
-    animation: push 5s;
-}
-/* animation pousser le prix*
-@keyframes push{
-    0%{
-        margin-right: 0px;
-    }
-    100%{
-        margin-right:60px;
-    }
-}
-
-/*icone validation*
-.card__valid{    
-   position:absolute;
-    top: 0px;
-    right: -45px;    
-
-    color: #fff;   
-    background-color:#99E2D0 ; 
-    opacity: 1;   
-   }
-
-/****** ANIMATION - icone validation*
-animation: 3s ease-in 1s forwards slidein;  
-
-
- @-webkit-keyframes slidein {
-    0% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-              opacity: 0;           
-    }
-    30% {
-        -webkit-transform: rotate(0);
-                transform: rotate(0);
-                opacity: 1;           
-      }
-    100% {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-              opacity: 1;            
-    }
-}**/
-
-
-/*** essai aniamtion 2***/
-.starter--1{
-    overflow: hidden;
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-/*icone validation*/
-.card__valid{      
-    
-    background: #99E2D0;
-    color: #fff;
-    border-radius: 0 15px 15px 0;
-
-    padding-left: 60px;
-   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    overflow: hidden;
-    /*
-    visibility: hidden;
-    transform: translate(75px);
-    transition: all 350ms ease-in-out;
-
-
-    i{
-    transition-duration: 1s;
-    transform: rotate(0deg);
-    }*/
-}
-
-.card__content{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 0 0 0.1rem 1rem;
-
-    .entitle{
-    margin: 10px 0 0 0;
-   
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    }
-}
-
-.entitle__content{
-    display: flex;
-    justify-content: space-between;
-  
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 100%;
-}
-
-.entitle__add, .entitle__price{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 
 /****** ANIMATION - apparition carte menu***/
 .container__starter, .starter--1, .starter--2, .starter--3{
@@ -243,13 +110,102 @@ animation: 3s ease-in 1s forwards slidein;
    }
 }
 
-/* Bouton Commander*/
 
+/***************** vignettes et animations****************************/
+.starter--1, .starter--2, .starter--3,.plate--1, .plate--2, .plate--2,.plate--3, .dessert--1, .dessert--2, .dessert--3 {
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:100%;
+    padding: 1rem 0 1rem 0.7rem;
+    gap: 0.3rem;   
+    box-sizing: border-box;
+
+    p{
+        margin:0px;
+    }
+}
+
+/*permet la disparation*/
+.entitle{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 0.5rem;
+}
+
+.entitle__content{ 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: width 1s;
+    /*mouvement price vers la gauche*/
+    &:hover{
+        width: 65%;
+    }
+    .entitle__add{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-right: 0.5rem; 
+    }
+    .entitle__price{
+        position: absolute;
+        right: 1rem;
+        transform: translateX(0);
+        transition: transform 1s;
+        &:hover{
+            transform: translateX(-4.5rem);
+        }
+    }
+}
+
+.card__checkpoint{        
+    width: 4.5rem;
+    transform: translateX(4.5rem);
+    transition: transform 1s ease-out;
+    
+    .fa-check-circle{
+        display:flex;     
+        justify-content:center ;
+        align-items: center;
+        width: 100%;           
+        height: 100%;
+
+        color: white;
+        background: #99E2D0;
+        transition: transform 2s;   
+       }
+}
+/*
+.starter--1:hover>.card__checkpoint{
+    transform: translateX(0); 
+}*/
+
+/*animation: check_rotate 2s forwards;
+@keyframes check_rotate{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}*/
+
+/* Bouton Commander*/
 .placement__btn{
     display: flex;
     justify-content: center;
-    margin-right:20px;
-  
+    margin:0px;  
 }
 
 .btn__buy{    
@@ -260,8 +216,8 @@ animation: 3s ease-in 1s forwards slidein;
     background: linear-gradient(#ef74da,$primarycolor);               
     transition: opacity $duration;
     opacity: 1;
-    text-align: center;
-    
+    text-align: center;  
+
 
     a{        
         color:#fff;
@@ -274,12 +230,12 @@ animation: 3s ease-in 1s forwards slidein;
 }
 
 
-/*Media queries*/
+/******************************Media queries************************/
 /* Si moins 992px = RESPONSIVE TABLETTE 
 @media screen and (max-width: 992px) {
 }
 
-/* Si moins de 768px RESPONSIVE TELEPHONE */
+/* Si moins de 768px RESPONSIVE TELEPHONE **/
 @media screen and (max-width:767px) {
     .main__menu__photo--plat{
                height:260px;
