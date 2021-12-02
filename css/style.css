@@ -19,6 +19,12 @@ h1 {
   font-weight: bold;
 }
 
+/*titres parties des menus*/
+h2 {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -28,6 +34,9 @@ i {
   font-size: 1.5rem;
 }
 
+/*****************************
+            INDEX
+*******************************/
 /* titre des sections - index */
 .section__title {
   font-size: 1.8rem;
@@ -87,16 +96,19 @@ i {
     font-size: 1rem;
   }
 }
+/*****************************
+            MENU
+*******************************/
 /*Typo page menu restaurant - CARD */
 .fa-arrow-left {
   font-size: 5vw;
 }
 
-/*--------------------*/
 /* TYPO MENU */
 .restaurant__name {
   font-family: "Shrikhand", cursive;
-  font-size: 2rem;
+  font-weight: lighter;
+  font-size: 1.8rem;
 }
 
 .menu__title {
@@ -104,26 +116,37 @@ i {
   font-size: 1.2rem;
 }
 
-.entitle, .entitle__price {
+.entitle {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+
+.entitle__price {
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .entitle__add {
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .btn__buy p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #fff;
 }
 
-/* Si moins de 768px RESPONSIVE TELEPHONE
-@media screen and (max-width:768px) {
+/* Si moins de 768px RESPONSIVE TELEPHONE*/
+@media screen and (max-width: 768px) {
+  .fa-arrow-left {
+    font-size: 6vw;
+  }
 
-}*/
+  .restaurant__name {
+    font-size: 1.6rem;
+  }
+}
 /*HEADER - INDEX*/
 .header__logo {
   display: flex;
@@ -143,11 +166,10 @@ i {
   .logo {
     width: 50%;
   }
-}
-/* Si moins de 768px RESPONSIVE TELEPHONE */
-@media screen and (max-width: 768px) {
-  .logo {
-    width: 50%;
+
+  .back {
+    position: absolute;
+    left: 6%;
   }
 }
 .section {
@@ -288,21 +310,21 @@ footer {
   flex-direction: column;
   background-color: #f6f6f6;
   border-radius: 25px 25px 0 0;
-  padding: 0 0 0 20px;
+  padding: 0 20px 40px 20px;
   margin-top: -50px;
-  padding-bottom: 40px;
 }
 
 .menu__container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 /*liste des containers*/
 .container__starter, .container__plate, .container__dessert {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 30%;
 }
 
@@ -315,7 +337,7 @@ footer {
 /**Animation coeur**/
 .menu__icone {
   position: absolute;
-  top: 59px;
+  top: 50px;
   right: 10%;
   cursor: pointer;
 }
@@ -339,20 +361,21 @@ h2 span {
 }
 
 /*style des vignettes*/
-.starter--1, .starter--2, .starter--3, .plate--1, .plate--2, .plate--2, .plate--3, .dessert--1, .dessert--2, .dessert--3 {
+.starter--1, .starter--2, .starter--3, .starter--4, .plate--1, .plate--2, .plate--2, .plate--3, .dessert--1, .dessert--2, .dessert--3 {
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 3px 3px 10px #d5d5d5;
-  padding-left: 20px;
   margin-bottom: 25px;
   overflow: hidden;
   cursor: pointer;
   position: relative;
-  min-width: 17.5rem;
+  min-width: 280px;
 }
 
-/****** ANIMATION - apparition carte menu***/
-.container__starter, .starter--1, .starter--2, .starter--3 {
+/******************************************************************** 
+                    ANIMATION - apparition carte menus
+*********************************************************************/
+.container__starter, .starter--1, .starter--2, .starter--3, .starter--4 {
   transition: 5s;
   animation: slideDown 2s 1;
 }
@@ -377,23 +400,25 @@ h2 span {
     opacity: 1;
   }
 }
-/***************** vignettes et animations****************************/
-.starter--1, .starter--2, .starter--3, .plate--1, .plate--2, .plate--2, .plate--3, .dessert--1, .dessert--2, .dessert--3 {
+/******************************************************************** 
+                    VIGNETTES & ANIMATIONS
+*********************************************************************/
+.starter--1, .starter--2, .starter--3, .starter--4, .plate--1, .plate--2, .plate--2, .plate--3, .dessert--1, .dessert--2, .dessert--3 {
   display: flex;
   justify-content: space-between;
   width: 100%;
   cursor: pointer;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 .card__content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
-  padding: 1rem 0 1rem 0.7rem;
   gap: 0.3rem;
   box-sizing: border-box;
+  padding: 1rem 0 1rem 0.7rem;
 }
 .card__content p {
   margin: 0px;
@@ -450,10 +475,49 @@ h2 span {
   transition: transform 2s;
 }
 
-/*
-.starter--1:hover>.card__checkpoint{
-    transform: translateX(0); 
-}*/
+/**********************************
+        slide checkpoint
+************************************/
+.starter--1:hover > .card__checkpoint {
+  transform: translateX(0);
+}
+
+.starter--2:hover > .card__checkpoint {
+  transform: translateX(0);
+}
+
+.starter--3:hover > .card__checkpoint {
+  transform: translateX(0);
+}
+
+.starter--4:hover > .card__checkpoint {
+  transform: translateX(0);
+}
+
+.plate--1:hover > .card__checkpoint {
+  transform: translateX(0);
+}
+
+.plate--2:hover > .card__checkpoint {
+  transform: translateX(0);
+}
+
+.plate--3:hover > .card__checkpoint {
+  transform: translateX(0);
+}
+
+.dessert--1:hover > .card__checkpoint {
+  transform: translateX(0);
+}
+
+.dessert--2:hover > .card__checkpoint {
+  transform: translateX(0);
+}
+
+.dessert--3:hover > .card__checkpoint {
+  transform: translateX(0);
+}
+
 /*animation: check_rotate 2s forwards;
 @keyframes check_rotate{
     0%{
@@ -471,7 +535,7 @@ h2 span {
 }
 
 .btn__buy {
-  width: 150px;
+  width: 10rem;
   box-shadow: 3px 3px 10px #8d8d8d;
   border-radius: 40px;
   padding: 20px 30px 20px 30px;
@@ -488,37 +552,56 @@ h2 span {
   box-shadow: 3px 3px 10px #3f3f3f;
 }
 
-/******************************Media queries************************/
-/* Si moins 992px = RESPONSIVE TABLETTE 
+/******************************************************************** 
+                    media queries
+*********************************************************************/
+/*Si moins 992px = RESPONSIVE TABLETTE*/
 @media screen and (max-width: 992px) {
-}
-
-/* Si moins de 768px RESPONSIVE TELEPHONE **/
-@media screen and (max-width: 767px) {
-  .main__menu__photo--plat {
-    height: 260px;
-  }
-
-  .menu__icone {
-    top: 53px;
-  }
-
   .menu__container {
     display: block;
-    height: auto;
+    padding-left: 20px;
   }
 
   .container__starter, .container__plate, .container__dessert {
     width: 95%;
+    display: block;
+  }
+
+  .menu__title {
+    padding-left: 20px;
   }
 
   .starter--1, .starter--2, .starter--3, .plate--1, .plate--2, .plate--2, .plate--3, .dessert--1, .dessert--2, .dessert--3 {
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 3px 3px 10px #d5d5d5;
-    padding-left: 20px;
-    margin-bottom: 25px;
-    height: 70px;
+    height: auto;
+  }
+}
+/*Si moins de 768px RESPONSIVE TELEPHONE*/
+@media screen and (max-width: 768px) {
+  .main__menu__photo--plat {
+    height: 260px;
+  }
+
+  .menu {
+    padding: 0 10px 60px 10px;
+  }
+  .menu__title {
+    padding-left: 10px;
+  }
+
+  .menu__icone {
+    top: 42px;
+  }
+
+  .menu__container {
+    padding: 0 10px 20px 10px;
+  }
+
+  .container__starter, .container__plate, .container__dessert {
+    width: 100%;
+  }
+
+  .starter--1, .starter--2, .starter--3, .starter--4, .plate--1, .plate--2, .plate--2, .plate--3, .dessert--1, .dessert--2, .dessert--3 {
+    height: auto;
   }
 }
 body {

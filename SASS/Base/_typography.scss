@@ -15,6 +15,12 @@ h1{
     font-weight: bold;
 }
 
+/*titres parties des menus*/
+h2{
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
 a{
     text-decoration: none;
     color: #000;
@@ -24,7 +30,9 @@ i{
     font-size: 1.5rem;
 }
 
-
+/*****************************
+            INDEX
+*******************************/
 /* titre des sections - index */
 .section__title {
     font-size: 1.8rem;
@@ -96,17 +104,20 @@ i{
     }  
 }
 
+/*****************************
+            MENU
+*******************************/
 /*Typo page menu restaurant - CARD */
 
 .fa-arrow-left{
     font-size: 5vw;
 }
 
-/*--------------------*/
 /* TYPO MENU */
 .restaurant__name{
     font-family: 'Shrikhand', cursive;
-    font-size: 2rem;
+    font-weight: lighter;
+    font-size: 1.8rem;
 }
 
 .menu__title{
@@ -114,24 +125,32 @@ i{
     font-size: 1.2rem;
 }
 
-.entitle, .entitle__price{
+.entitle{
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
+}
+.entitle__price{
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 
 .entitle__add{
     font-weight: normal;
-   font-size: 1rem;
+   font-size: 0.8rem;
 }
 
 .btn__buy p{
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #fff;
-
 }
 
-/* Si moins de 768px RESPONSIVE TELEPHONE
+/* Si moins de 768px RESPONSIVE TELEPHONE*/
 @media screen and (max-width:768px) {
-
-}*/
+    .fa-arrow-left{
+        font-size: 6vw;
+    }
+    .restaurant__name{
+        font-size: 1.6rem;
+    }
+}
