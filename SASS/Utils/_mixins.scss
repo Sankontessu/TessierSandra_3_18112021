@@ -1,3 +1,5 @@
-@mixin btn_shadow{
-    box-shadow: 3px 3px 10px #8d8d8d;
+@mixin ellipse{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 } 

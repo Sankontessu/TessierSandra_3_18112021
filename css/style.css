@@ -292,7 +292,9 @@ footer {
   font-weight: bold;
 }
 
-/* CARD - menu-restaurant*/
+/******************************************************************** 
+                    CARDS - carte menus
+*********************************************************************/
 /*Photo menu*/
 .main__menu__photo {
   margin: 0;
@@ -334,7 +336,9 @@ footer {
   padding-top: 20px;
 }
 
-/**Animation coeur**/
+/******************************************************************** 
+                    ANIMATION COEUR
+*********************************************************************/
 .menu__icone {
   position: absolute;
   top: 50px;
@@ -355,21 +359,24 @@ footer {
   opacity: 1;
 }
 
-/*soulignement letttes*/
+/*soulignement letttes titres*/
 h2 span {
   border-bottom: 2px solid #99E2D0;
 }
 
 /*style des vignettes*/
 .starter--1, .starter--2, .starter--3, .starter--4, .plate--1, .plate--2, .plate--2, .plate--3, .dessert--1, .dessert--2, .dessert--3 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  min-width: 280px;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 3px 3px 10px #d5d5d5;
   margin-bottom: 25px;
   overflow: hidden;
   cursor: pointer;
-  position: relative;
-  min-width: 280px;
 }
 
 /******************************************************************** 
@@ -400,17 +407,6 @@ h2 span {
     opacity: 1;
   }
 }
-/******************************************************************** 
-                    VIGNETTES & ANIMATIONS
-*********************************************************************/
-.starter--1, .starter--2, .starter--3, .starter--4, .plate--1, .plate--2, .plate--2, .plate--3, .dessert--1, .dessert--2, .dessert--3 {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  cursor: pointer;
-  /*overflow: hidden;*/
-}
-
 .card__content {
   display: flex;
   flex-direction: column;
@@ -424,7 +420,7 @@ h2 span {
   margin: 0px;
 }
 
-/*permet la disparation du texte en ellipse*/
+/*permet la disparation du texte en ellipse + déplacements*/
 .entitle {
   white-space: nowrap;
   overflow: hidden;
@@ -437,8 +433,8 @@ h2 span {
   display: flex;
   justify-content: space-between;
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
   transition: width 1s;
 }
 .entitle__content .entitle__add {
@@ -471,7 +467,7 @@ h2 span {
   background: #99E2D0;
 }
 
-/*mouvement circulaire icone check*/
+/*rotation icone check*/
 @keyframes check_rotate {
   0% {
     transform: rotate(0deg);
@@ -480,9 +476,9 @@ h2 span {
     transform: rotate(360deg);
   }
 }
-/**********************************
-        slide checkpoint + price
-************************************/
+/******************************************************************** 
+                    ANIMATIONS TOTALES (slides des vignettes)
+*********************************************************************/
 .starter--1:hover .entitle__content, .starter--2:hover .entitle__content, .starter--3:hover .entitle__content, .starter--4:hover .entitle__content, .plate--1:hover .entitle__content, .plate--2:hover .entitle__content, .plate--3:hover .entitle__content, .dessert--1:hover .entitle__content, .dessert--2:hover .entitle__content, .dessert--3:hover .entitle__content {
   width: 80%;
 }
@@ -496,7 +492,7 @@ h2 span {
   animation: check_rotate 2s 0.5s forwards;
 }
 
-/* Bouton Commander*/
+/* Bouton "Commander"*/
 .placement__btn {
   display: flex;
   justify-content: center;
@@ -522,7 +518,7 @@ h2 span {
 }
 
 /******************************************************************** 
-                    media queries
+                    Media Queries PAGE CARDS - MENUS
 *********************************************************************/
 /*Si moins 992px = RESPONSIVE TABLETTE*/
 @media screen and (max-width: 992px) {
@@ -568,10 +564,6 @@ h2 span {
   .container__starter, .container__plate, .container__dessert {
     width: 100%;
   }
-
-  .starter--1, .starter--2, .starter--3, .starter--4, .plate--1, .plate--2, .plate--2, .plate--3, .dessert--1, .dessert--2, .dessert--3 {
-    height: auto;
-  }
 }
 body {
   position: relative;
@@ -581,7 +573,9 @@ body {
   height: auto;
 }
 
-/* page INDEX */
+/******************************************************************** 
+                     PAGE INDEX
+*********************************************************************/
 /*barre de localisation*/
 .location {
   display: flex;
@@ -620,7 +614,9 @@ body {
   box-shadow: 3px 3px 10px #3f3f3f;
 }
 
-/*Page index - section OPERATION - "fonctionnement"*/
+/******************************************************************** 
+        Page index - section OPERATION - "fonctionnement"
+*********************************************************************/
 .operation {
   margin: 30px 0 30px 0;
 }
@@ -677,7 +673,9 @@ body {
   box-shadow: 3px 3px 10px #3f3f3f;
 }
 
-/*page index - section RESTAURANT */
+/******************************************************************** 
+                page index - section RESTAURANT 
+*********************************************************************/
 #restaurant {
   background-color: #f6f6f6;
   display: flex;
@@ -759,7 +757,9 @@ body {
   opacity: 1;
 }
 
-/******Media Queries INDEX ****/
+/******************************************************************** 
+                    Media Queries PAGE INDEX 
+*********************************************************************/
 /* Si moins 992px = RESPONSIVE TABLETTE */
 @media screen and (max-width: 992px) {
   /***Section OPERATION -- "fonctionnement" ***/
