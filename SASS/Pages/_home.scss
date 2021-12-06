@@ -84,6 +84,7 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
     
         border-radius: 20px;
         background-color: #f6f6f6;    
@@ -206,10 +207,10 @@ body{
 /* Si moins 992px = RESPONSIVE TABLETTE */
 @media screen and (max-width: 992px)
 {
-    /***Section OPERATION -- "fonctionneemnt" ***/
+    /***Section OPERATION -- "fonctionnement" ***/
     .bloc__operation__step{
         flex-direction: column; 
-        }     
+    } 
 }
   
 /* Si moins de 768px RESPONSIVE TELEPHONE */ 
@@ -221,6 +222,16 @@ body{
             padding: 0px 40px 0px 40px;  
         }
     }
+
+    .operation__step{
+        &__container:active>i{         
+            color:$primarycolor;            
+        } 
+        &__container:active{
+            background-color:#f5edff;  
+            box-shadow: $shadowdark;  
+        } 
+    } 
 
     .container__card{
         flex-direction: column;

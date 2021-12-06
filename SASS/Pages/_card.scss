@@ -202,7 +202,7 @@ h2 span{
 /**********************************
         slide checkpoint + price
 ************************************/
-/* déplacment du prix*/
+/* déplacement du prix*/
 .starter--1:hover,.starter--2:hover, .starter--3:hover, .starter--4:hover, .plate--1:hover, .plate--2:hover, .plate--3:hover, .dessert--1:hover, .dessert--2:hover, .dessert--3:hover {
     .entitle__price{
         transform: translateX(-4.5rem);
@@ -210,7 +210,7 @@ h2 span{
 }
 
 
-/* deplacement du checkpoint*/
+/* déplacement du checkpoint*/
 .starter--1:hover>.card__checkpoint{
     transform: translateX(0); 
     .fa-check-circle{
