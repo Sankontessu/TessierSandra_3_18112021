@@ -424,7 +424,7 @@ h2 span {
   margin: 0px;
 }
 
-/*permet la disparation*/
+/*permet la disparation du texte en ellipse*/
 .entitle {
   white-space: nowrap;
   overflow: hidden;
@@ -435,19 +435,20 @@ h2 span {
 .entitle__content {
   width: 100%;
   display: flex;
+  text-overflow: ellipsis;
   justify-content: space-between;
   overflow: hidden;
   transition: width 1s;
-  /*mouvement price vers la gauche*/
+  /*mouvement qui permet l'ellipse*/
 }
 .entitle__content:hover {
-  width: 65%;
+  width: 80%;
 }
 .entitle__content .entitle__add {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 .entitle__content .entitle__price {
   position: absolute;
@@ -455,14 +456,13 @@ h2 span {
   transform: translateX(0);
   transition: transform 1s;
 }
-.entitle__content .entitle__price:hover {
-  transform: translateX(-4.5rem);
-}
 
 .card__checkpoint {
   width: 4.5rem;
   transform: translateX(4.5rem);
   transition: transform 1s ease-out;
+  background: #99E2D0;
+  overflow: hidden;
 }
 .card__checkpoint .fa-check-circle {
   display: flex;
@@ -472,61 +472,96 @@ h2 span {
   height: 100%;
   color: white;
   background: #99E2D0;
-  transition: transform 2s;
 }
 
+/*mouvement circulaire icone check*/
+@keyframes check_rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /**********************************
-        slide checkpoint
+        slide checkpoint + price
 ************************************/
+/* déplacment du prix*/
+.starter--1:hover .entitle__price, .starter--2:hover .entitle__price, .starter--3:hover .entitle__price, .starter--4:hover .entitle__price, .plate--1:hover .entitle__price, .plate--2:hover .entitle__price, .plate--3:hover .entitle__price, .dessert--1:hover .entitle__price, .dessert--2:hover .entitle__price, .dessert--3:hover .entitle__price {
+  transform: translateX(-4.5rem);
+}
+
+/* deplacement du checkpoint*/
 .starter--1:hover > .card__checkpoint {
   transform: translateX(0);
+}
+.starter--1:hover > .card__checkpoint .fa-check-circle {
+  animation: check_rotate 2s 0.5s forwards;
 }
 
 .starter--2:hover > .card__checkpoint {
   transform: translateX(0);
 }
+.starter--2:hover > .card__checkpoint .fa-check-circle {
+  animation: check_rotate 2s 0.5s forwards;
+}
 
 .starter--3:hover > .card__checkpoint {
   transform: translateX(0);
+}
+.starter--3:hover > .card__checkpoint .fa-check-circle {
+  animation: check_rotate 2s 0.5s forwards;
 }
 
 .starter--4:hover > .card__checkpoint {
   transform: translateX(0);
 }
+.starter--4:hover > .card__checkpoint .fa-check-circle {
+  animation: check_rotate 2s 0.5s forwards;
+}
 
 .plate--1:hover > .card__checkpoint {
   transform: translateX(0);
+}
+.plate--1:hover > .card__checkpoint .fa-check-circle {
+  animation: check_rotate 2s 0.5s forwards;
 }
 
 .plate--2:hover > .card__checkpoint {
   transform: translateX(0);
 }
+.plate--2:hover > .card__checkpoint .fa-check-circle {
+  animation: check_rotate 2s 0.5s forwards;
+}
 
 .plate--3:hover > .card__checkpoint {
   transform: translateX(0);
+}
+.plate--3:hover > .card__checkpoint .fa-check-circle {
+  animation: check_rotate 2s 0.5s forwards;
 }
 
 .dessert--1:hover > .card__checkpoint {
   transform: translateX(0);
 }
+.dessert--1:hover > .card__checkpoint .fa-check-circle {
+  animation: check_rotate 2s 0.5s forwards;
+}
 
 .dessert--2:hover > .card__checkpoint {
   transform: translateX(0);
+}
+.dessert--2:hover > .card__checkpoint .fa-check-circle {
+  animation: check_rotate 2s 0.5s forwards;
 }
 
 .dessert--3:hover > .card__checkpoint {
   transform: translateX(0);
 }
+.dessert--3:hover > .card__checkpoint .fa-check-circle {
+  animation: check_rotate 2s 0.5s forwards;
+}
 
-/*animation: check_rotate 2s forwards;
-@keyframes check_rotate{
-    0%{
-        transform:rotate(0deg);
-    }
-    100%{
-        transform:rotate(360deg);
-    }
-}*/
 /* Bouton Commander*/
 .placement__btn {
   display: flex;

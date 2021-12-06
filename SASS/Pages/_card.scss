@@ -137,7 +137,7 @@ h2 span{
     }
 }
 
-/*permet la disparation*/
+/*permet la disparation du texte en ellipse*/
 .entitle{
     white-space: nowrap;
     overflow: hidden;
@@ -147,28 +147,27 @@ h2 span{
 
 .entitle__content{ 
     width: 100%;
-    display: flex;
+    display: flex;    
+    text-overflow: ellipsis;
     justify-content: space-between;
     overflow: hidden;
     transition: width 1s;
-    /*mouvement price vers la gauche*/
+    /*mouvement qui permet l'ellipse*/
     &:hover{
-        width: 65%;
+        width: 80%;
     }
+
     .entitle__add{
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        margin-right: 0.5rem; 
+        margin-right: 1rem; 
     }
     .entitle__price{
         position: absolute;
         right: 1rem;
         transform: translateX(0);
         transition: transform 1s;
-        &:hover{
-            transform: translateX(-4.5rem);
-        }
     }
 }
 
@@ -176,63 +175,21 @@ h2 span{
     width: 4.5rem;
     transform: translateX(4.5rem);
     transition: transform 1s ease-out;
+    background: #99E2D0;
+    overflow: hidden;
     
     .fa-check-circle{
         display:flex;     
         justify-content:center ;
-        align-items: center;
+        align-items: center;       
         width: 100%;           
         height: 100%;
-
         color: white;
         background: #99E2D0;
-        transition: transform 2s;   
        }
 }
-/**********************************
-        slide checkpoint
-************************************/
-.starter--1:hover>.card__checkpoint{
-    transform: translateX(0); 
-}
-.starter--2:hover>.card__checkpoint{
-    transform: translateX(0); 
-}
 
-.starter--3:hover>.card__checkpoint{
-    transform: translateX(0); 
-}
-
-.starter--4:hover>.card__checkpoint{
-    transform: translateX(0); 
-}
-
-
-.plate--1:hover>.card__checkpoint{
-    transform: translateX(0); 
-}
-.plate--2:hover>.card__checkpoint{
-    transform: translateX(0); 
-}
-
-.plate--3:hover>.card__checkpoint{
-    transform: translateX(0); 
-}
-
-
-.dessert--1:hover>.card__checkpoint{
-    transform: translateX(0); 
-}
-.dessert--2:hover>.card__checkpoint{
-    transform: translateX(0); 
-}
-
-.dessert--3:hover>.card__checkpoint{
-    transform: translateX(0); 
-}
-
-
-/*animation: check_rotate 2s forwards;
+/*mouvement circulaire icone check*/
 @keyframes check_rotate{
     0%{
         transform:rotate(0deg);
@@ -240,7 +197,96 @@ h2 span{
     100%{
         transform:rotate(360deg);
     }
-}*/
+}
+
+/**********************************
+        slide checkpoint + price
+************************************/
+/* déplacment du prix*/
+.starter--1:hover,.starter--2:hover, .starter--3:hover, .starter--4:hover, .plate--1:hover, .plate--2:hover, .plate--3:hover, .dessert--1:hover, .dessert--2:hover, .dessert--3:hover {
+    .entitle__price{
+        transform: translateX(-4.5rem);
+    }
+}
+
+
+/* deplacement du checkpoint*/
+.starter--1:hover>.card__checkpoint{
+    transform: translateX(0); 
+    .fa-check-circle{
+        animation: check_rotate 2s 0.5s forwards;
+    }
+}
+
+.starter--2:hover>.card__checkpoint{
+    transform: translateX(0); 
+    .fa-check-circle{
+        animation: check_rotate 2s 0.5s forwards;
+    }
+    
+}
+
+.starter--3:hover>.card__checkpoint{
+    transform: translateX(0); 
+    .fa-check-circle{
+        animation: check_rotate 2s 0.5s forwards;
+    }
+}
+
+.starter--4:hover>.card__checkpoint{
+    transform: translateX(0); 
+    .fa-check-circle{
+        animation: check_rotate 2s 0.5s forwards;
+    }
+}
+
+
+.plate--1:hover>.card__checkpoint{
+    transform: translateX(0); 
+    .fa-check-circle{
+        animation: check_rotate 2s 0.5s forwards;
+    }
+}
+.plate--2:hover>.card__checkpoint{
+    transform: translateX(0); 
+
+    .fa-check-circle{
+        animation: check_rotate 2s 0.5s forwards;
+    }
+}
+
+.plate--3:hover>.card__checkpoint{
+    transform: translateX(0); 
+
+    .fa-check-circle{
+        animation: check_rotate 2s 0.5s forwards;
+    }
+}
+
+
+.dessert--1:hover>.card__checkpoint{
+    transform: translateX(0); 
+
+    .fa-check-circle{
+        animation: check_rotate 2s 0.5s forwards;
+    }
+}
+.dessert--2:hover>.card__checkpoint{
+    transform: translateX(0); 
+
+    .fa-check-circle{
+        animation: check_rotate 2s 0.5s forwards;
+    }
+}
+
+.dessert--3:hover>.card__checkpoint{
+    transform: translateX(0); 
+
+    .fa-check-circle{
+        animation: check_rotate 2s 0.5s forwards;
+    }
+}
+
 
 
 /* Bouton Commander*/
