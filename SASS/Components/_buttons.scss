@@ -1,0 +1,64 @@
+/*btn présentation*/
+.presentation__btn{
+    box-shadow: $shadowbasic;       
+    border-radius: 40px;
+    padding: 20px 30px 20px 30px;
+    background: linear-gradient(#ef74da,$primarycolor);               
+    transition: opacity $duration;
+    opacity: 1;
+                
+    &:hover{
+        opacity: $opacitylight;
+        box-shadow: $shadowdark;           
+     }
+}
+
+
+/*btn fonctionnement*/
+.operation__step{
+    position: relative;
+    margin: 20px 0 20px 0;
+
+    &-num{
+        position: absolute; 
+        top: -10%;
+        left: 0%;    
+        color: #fff;
+        } 
+       
+        .text-num{
+            padding: 10px 14px 5px 14px;
+            border-radius: 50%;
+            background-color: $primarycolor; 
+        }
+    
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    
+        border-radius: 20px;
+        background-color: #f6f6f6;    
+        box-shadow: $shadowlight;
+        margin: 0 0 0 20px;
+        height: 70px;
+        width: 300px;
+
+        transition: background-color $duration; 
+        
+        i{    
+            color: #7e7e7e;          
+            padding: 0 20px 0 20px;
+            transition: color $duration;
+        }   
+     }  
+
+    &__container:hover>i{         
+        color:$primarycolor;            
+    } 
+    &__container:hover{
+        background-color:#f5edff;  
+        box-shadow: $shadowdark;          
+    } 
+} 
