@@ -1,4 +1,7 @@
-/*btn présentation*/
+/******************************************************************** 
+                    BOUTONS - INDEX
+*********************************************************************/
+/*index - btn présentation*/
 .presentation__btn{
     box-shadow: $shadowbasic;       
     border-radius: 40px;
@@ -13,8 +16,7 @@
      }
 }
 
-
-/*btn fonctionnement*/
+/*index - btn fonctionnement*/
 .operation__step{
     position: relative;
     margin: 20px 0 20px 0;
@@ -62,3 +64,110 @@
         box-shadow: $shadowdark;          
     } 
 } 
+/******************************************************************** 
+                    BOUTON COEUR
+*********************************************************************/
+/*icone coeur - transition couleur*/
+.fa-heart{
+    position: absolute;
+    top: 20%;
+    right: 15%; 
+    cursor: pointer;       
+}
+
+.colorempty:hover{   
+   border:0px;
+}
+
+.colorfull{
+    transition: opacity 0.80s;
+    opacity: 0;  
+
+    border: 0px;
+
+    background-image: linear-gradient(175deg,$primarycolor,#ef74da);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+
+    &:hover{
+        opacity : 1;       
+    }    
+}
+
+/******************************************************************** 
+                    ANIMATION COEUR
+*********************************************************************/
+.menu__icone{
+    position: absolute;
+    top: 50px;
+    right:10%;
+    cursor: pointer;  
+}
+
+.colorfull{
+    transition: opacity 0.80s;
+    opacity: 0;
+    background-image: linear-gradient(175deg,#9356DC,#ef74da);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+
+    &:hover{
+        opacity : 1; 
+    }  
+}
+
+/******************************************************************** 
+                    BOUTON CARD
+*********************************************************************/
+/*card - menu btn commander*/
+.placement__btn{
+    display: flex;
+    justify-content: center;
+    margin:0px;  
+}
+
+.btn__buy{    
+    width:10rem;
+    box-shadow: $shadowbasic;       
+    border-radius: 40px;
+    padding: 20px 30px 20px 30px;
+    background: linear-gradient(#ef74da,$primarycolor);               
+    transition: opacity $duration;
+    opacity: 1;
+    text-align: center;  
+
+    a{        
+        color:#fff;
+    }
+                
+    &:hover{
+        opacity: $opacitylight;
+        box-shadow: $shadowdark;           
+     }
+}
+
+/******************************************************************** 
+                    MEDIA QUERIES
+*********************************************************************/
+/*Si moins de 768px RESPONSIVE TELEPHONE*/
+@media screen and (max-width:768px) {    
+    /*icone coeur*/ 
+    .menu__icone{       
+        top: 42px;   
+    }
+
+    /*fonctionnement*/
+    .operation__step{
+        &__container:active>i{         
+            color:$primarycolor;            
+        } 
+        &__container:active{
+            background-color:#f5edff;  
+            box-shadow: $shadowdark;  
+        } 
+    } 
+}

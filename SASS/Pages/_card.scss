@@ -1,5 +1,5 @@
 /******************************************************************** 
-                    CARDS - carte menus
+                    CARD - carte menus
 *********************************************************************/
 /*Photo menu*/
 .main__menu__photo{
@@ -37,34 +37,10 @@
     width: 30%;
 }
 
-/* titre restaurant + coeur*/
+/* titre restaurant*/
 .menu__title{
     position: relative; 
     padding-top: 20px;
-}
-
-/******************************************************************** 
-                    ANIMATION COEUR
-*********************************************************************/
-.menu__icone{
-    position: absolute;
-    top: 50px;
-    right:10%;
-    cursor: pointer;  
-}
-
-.colorfull{
-    transition: opacity 0.80s;
-    opacity: 0;
-    background-image: linear-gradient(175deg,#9356DC,#ef74da);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
-
-    &:hover{
-        opacity : 1; 
-    }  
 }
 
 /*soulignement letttes titres*/
@@ -208,36 +184,8 @@ h2 span{
 }
 
 
-/* Bouton "Commander"*/
-.placement__btn{
-    display: flex;
-    justify-content: center;
-    margin:0px;  
-}
-
-.btn__buy{    
-    width:10rem;
-    box-shadow: $shadowbasic;       
-    border-radius: 40px;
-    padding: 20px 30px 20px 30px;
-    background: linear-gradient(#ef74da,$primarycolor);               
-    transition: opacity $duration;
-    opacity: 1;
-    text-align: center;  
-
-    a{        
-        color:#fff;
-    }
-                
-    &:hover{
-        opacity: $opacitylight;
-        box-shadow: $shadowdark;           
-     }
-}
-
-
 /******************************************************************** 
-                    Media Queries PAGE CARDS - MENUS
+                    Media Queries PAGE CARD - MENUS
 *********************************************************************/
 /*Si moins 992px = RESPONSIVE TABLETTE*/
 @media screen and (max-width: 992px) {
@@ -272,10 +220,6 @@ h2 span{
         &__title{
             padding-left: 10px;
         }
-    }
-
-    .menu__icone{       
-        top: 42px;   
     }
 
     .menu__container{
