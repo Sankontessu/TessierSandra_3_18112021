@@ -37,6 +37,12 @@ i {
 /*****************************
             INDEX
 *******************************/
+/*location - index*/
+.location__text {
+  font-size: 1.2rem;
+  font-family: roboto;
+}
+
 /* titre des sections - index */
 .section__title {
   font-size: 1.8rem;
@@ -685,6 +691,7 @@ body {
 *********************************************************************/
 /*barre de localisation*/
 .location {
+  height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -694,6 +701,13 @@ body {
 }
 .location .fa-map-marker-alt {
   margin-right: 10px;
+}
+.location__text {
+  width: 150px;
+  text-align: center;
+  border: none;
+  background: #eaeaea;
+  font-weight: bold;
 }
 
 /*bloc Présentation*/

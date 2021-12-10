@@ -11,14 +11,25 @@ body{
 *********************************************************************/
 /*barre de localisation*/
 .location {
+    height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #eaeaea;
     box-shadow:inset 0px 5px 3px #d5d5d5; /*bordure intérieure*/
     
+
     .fa-map-marker-alt{
         margin-right: 10px;
+    }
+
+    &__text{
+    width: 150px; 
+    text-align: center;
+    border: none;
+    background: #eaeaea;
+    font-weight: bold;
+    
     }
 }
 
